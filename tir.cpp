@@ -1,5 +1,6 @@
 #include "tir.h"
 #include "ui_tir.h"
+#include <QThread>
 
 Tir::Tir(int updateInterval, QWidget *parent) :
     QWidget(parent),
@@ -8,11 +9,32 @@ Tir::Tir(int updateInterval, QWidget *parent) :
 
     startTimer(updateInterval);
     ui->setupUi(this);
+    hid_detect = false;
+
+    xpos = 0;
+    ypos = 0;
 }
 
 Tir::~Tir()
 {
     delete ui;
+}
+
+void Tir::mouseReleaseEvent(QMouseEvent * event )
+{
+    /*QPainter painter(this);
+    painter.setPen(QPen(Qt::black, 1, Qt::SolidLine, Qt::FlatCap));
+    painter.setBrush(QBrush(Qt::red, Qt::SolidPattern));
+    qreal rx = 5;
+    qreal ry = 5;
+    painter.drawEllipse(QCursor::pos(),rx,ry);*/
+    xpos = QCursor::pos().x() - this->x()-8;
+    ypos = QCursor::pos().y() - this->y()-30;
+    //f = QPointF(QCursor::pos());
+    if(hid_detect){
+        points_hid.append(QPointF(xpos,ypos));
+    }
+    repaint();
 }
 
 void Tir::timerEvent(QTimerEvent *event)
@@ -30,13 +52,14 @@ void Tir::timerEvent(QTimerEvent *event)
 
     ui->hvalue->setText(QString("h=%1").arg(h));
     if(h<=50){
+        hid_detect = true;
         ui->hidDetector->setText("Hid Detect!");
         ui->hidDetector->setStyleSheet("background: #B22222;");
     }else{
+        hid_detect = false;
         ui->hidDetector->setText("Shoot Miss!");
         ui->hidDetector->setStyleSheet("background: #432;");
     }
-
 }
 
 void Tir::paintEvent(QPaintEvent *event)
@@ -57,5 +80,9 @@ void Tir::paintEvent(QPaintEvent *event)
     qreal ry = 50;
     painter.drawEllipse(center,rx,ry);
 
+    foreach (QPointF p, points_hid) {
+        painter.setBrush(QBrush(Qt::red, Qt::SolidPattern));
+        painter.drawEllipse(p,2,2);
+    }
 
 }

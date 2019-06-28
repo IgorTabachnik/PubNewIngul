@@ -5,6 +5,7 @@
 #include <QLabel>
 #include <QCursor>
 #include <QPainter>
+#include <QList>
 
 namespace Ui {
 class Tir;
@@ -19,13 +20,17 @@ public:
     ~Tir();
 
     void timerEvent(QTimerEvent *event) override;
-
+    void mouseReleaseEvent(QMouseEvent * event ) override;
 protected:
     void paintEvent(QPaintEvent* event);
 
 
 private:
     Ui::Tir *ui;
+    qreal xpos,ypos;
+    bool hid_detect;
+    bool draw_hid;
+    QList<QPointF> points_hid;
 };
 
 #endif // TIR_H
