@@ -30,8 +30,12 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    tir.h
+    tir.h \
+    target.h
 
 FORMS += \
         mainwindow.ui \
     tir.ui
+
+RESOURCES += \
+    images.qrc

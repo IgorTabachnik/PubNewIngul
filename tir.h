@@ -6,6 +6,8 @@
 #include <QCursor>
 #include <QPainter>
 #include <QList>
+#include <QApplication>
+#include "target.h"
 
 namespace Ui {
 class Tir;
@@ -16,21 +18,19 @@ class Tir : public QWidget
     Q_OBJECT
 
 public:
-    explicit Tir(int updateInterval = 100, QWidget *parent = 0);
+    explicit Tir(int updateInterval = 33, QWidget *parent = 0);
     ~Tir();
-
-    void timerEvent(QTimerEvent *event) override;
-    void mouseReleaseEvent(QMouseEvent * event ) override;
-protected:
-    void paintEvent(QPaintEvent* event);
-
 
 private:
     Ui::Tir *ui;
-    qreal xpos,ypos;
-    bool hid_detect;
-    bool draw_hid;
-    QList<QPointF> points_hid;
+    bool hid_detected = false;
+
+    QList<Target> targets;
+    QList<QPointF> bullets;
+
+    void timerEvent(QTimerEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent * event ) override;
+    void paintEvent(QPaintEvent* event);
 };
 
 #endif // TIR_H
