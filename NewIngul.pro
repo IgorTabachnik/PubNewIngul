@@ -31,7 +31,8 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     tir.h \
-    target.h
+    target.h \
+    bullet_info.h
 
 FORMS += \
         mainwindow.ui \
