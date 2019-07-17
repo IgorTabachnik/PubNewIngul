@@ -14,7 +14,7 @@ Tir::Tir(int updateInterval, QWidget *parent) :
     targets.append(Target(Target::body, QPointF(50, 50), QPointF(150, 150)));
     targets2.append(new Target2(this));
     targets2[0]->setGeometry(300,300,150,150);
-    targets2[0]->LoadTexture(Target2::body);
+    targets2[0]->LoadTexture(Target2::chest);
 
 }
 
@@ -23,7 +23,7 @@ Tir::~Tir()
     delete ui;
 }
 
-void Tir::mouseReleaseEvent(QMouseEvent *)
+/*void Tir::mouseReleaseEvent(QMouseEvent *)
 {
     if (this->focused_targets.length() > 0) {
         QPointF pos = this->mapFromGlobal(QCursor::pos());
@@ -68,3 +68,4 @@ void Tir::paintEvent(QPaintEvent *evt)
     }
     QWidget::paintEvent(evt);
 }
+*/

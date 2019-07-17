@@ -24,6 +24,7 @@ private:
     QPixmap img;
     QPixmap texture;
     QBitmap mask;
+    QList<QPointF> bullets;
 
 signals:
 

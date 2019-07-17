@@ -30,11 +30,11 @@ private:
     QList<Target2*> targets2;
     //QList<QPointF> bullets;
     QList<int> focused_targets;
-    QList<BulletInfo> bullets;
+    //QList<BulletInfo> bullets;
 
-    void timerEvent(QTimerEvent *event) override;
-    void mouseReleaseEvent(QMouseEvent * event ) override;
-    void paintEvent(QPaintEvent* event);
+    //void timerEvent(QTimerEvent *event) override;
+    //void mouseReleaseEvent(QMouseEvent * event ) override;
+    //void paintEvent(QPaintEvent* event);
 };
 
 #endif // TIR_H
