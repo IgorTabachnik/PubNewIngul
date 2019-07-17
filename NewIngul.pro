@@ -33,7 +33,8 @@ HEADERS += \
         mainwindow.h \
     target2.h \
     tir.h \
-    target.h
+    target.h \
+    bullet_info.h
 
 FORMS += \
         mainwindow.ui \

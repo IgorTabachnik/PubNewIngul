@@ -25,22 +25,25 @@ Tir::~Tir()
 
 void Tir::mouseReleaseEvent(QMouseEvent *)
 {
-    if (this->hid_detected) {
-        QPoint pos = this->mapFromGlobal(QCursor::pos());
-        this->bullets.append(QPointF(pos.x(), pos.y()));
+    if (this->focused_targets.length() > 0) {
+        QPointF pos = this->mapFromGlobal(QCursor::pos());
+        for (int i = 0; i < this->focused_targets.length(); i++) {
+            this->bullets.append(BulletInfo(
+                this->targets[this->focused_targets[i]], pos
+            ));
+        }
     }
 }
 
 void Tir::timerEvent(QTimerEvent *)
 {
     QPointF cursor = this->mapFromGlobal(QCursor::pos());
+    this->focused_targets.clear();
 
-    for (int i = 0; i < targets.length(); i++) {
-        this->hid_detected = targets[i].hid_detected(cursor);
-        ui->hidDetector->setText(this->hid_detected ? "Hover detected" : "No hover detected");
-
-        if (this->hid_detected) {
-            break;
+    for (int i = 0; i < this->targets.length(); i++) {
+        bool focused = this->targets[i].hid_detected(cursor);
+        if (focused) {
+            this->focused_targets.append(i);
         }
     }
 
@@ -59,7 +62,9 @@ void Tir::paintEvent(QPaintEvent *evt)
     painter.setBrush(QBrush(Qt::red, Qt::SolidPattern));
 
     for (int i = 0; i < this->bullets.length(); i++) {
-        painter.drawEllipse(this->bullets[i] - QPointF(1.5f, 1.5f), 3, 3);
+        if (this->bullets[i].get_target_info()->visible == true) {
+            painter.drawEllipse(this->bullets[i].get_position() - QPointF(1.5f, 1.5f), 3, 3);
+        }
     }
     QWidget::paintEvent(evt);
 }

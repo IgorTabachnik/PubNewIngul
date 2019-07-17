@@ -9,6 +9,7 @@
 #include <QApplication>
 #include "target.h"
 #include "target2.h"
+#include "bullet_info.h"
 
 namespace Ui {
 class Tir;
@@ -24,11 +25,12 @@ public:
 
 private:
     Ui::Tir *ui;
-    bool hid_detected = false;
 
     QList<Target> targets;
     QList<Target2*> targets2;
     QList<QPointF> bullets;
+    QList<int> focused_targets;
+    QList<BulletInfo> bullets;
 
     void timerEvent(QTimerEvent *event) override;
     void mouseReleaseEvent(QMouseEvent * event ) override;
