@@ -8,6 +8,7 @@
 #include <QList>
 #include <QApplication>
 #include "target.h"
+#include "target2.h"
 
 namespace Ui {
 class Tir;
@@ -18,7 +19,7 @@ class Tir : public QWidget
     Q_OBJECT
 
 public:
-    explicit Tir(int updateInterval = 33, QWidget *parent = 0);
+    explicit Tir(int updateInterval = 33, QWidget *parent = nullptr);
     ~Tir();
 
 private:
@@ -26,6 +27,7 @@ private:
     bool hid_detected = false;
 
     QList<Target> targets;
+    QList<Target2*> targets2;
     QList<QPointF> bullets;
 
     void timerEvent(QTimerEvent *event) override;

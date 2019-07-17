@@ -12,6 +12,10 @@ Tir::Tir(int updateInterval, QWidget *parent) :
     ui->setupUi(this);
 
     targets.append(Target(Target::body, QPointF(50, 50), QPointF(150, 150)));
+    targets2.append(new Target2(this));
+    targets2[0]->setGeometry(300,300,150,150);
+    targets2[0]->LoadTexture(Target2::body);
+
 }
 
 Tir::~Tir()
@@ -43,7 +47,7 @@ void Tir::timerEvent(QTimerEvent *)
     this->repaint();
 }
 
-void Tir::paintEvent(QPaintEvent *)
+void Tir::paintEvent(QPaintEvent *evt)
 {
     QPainter painter(this);
 
@@ -57,4 +61,5 @@ void Tir::paintEvent(QPaintEvent *)
     for (int i = 0; i < this->bullets.length(); i++) {
         painter.drawEllipse(this->bullets[i] - QPointF(1.5f, 1.5f), 3, 3);
     }
+    QWidget::paintEvent(evt);
 }

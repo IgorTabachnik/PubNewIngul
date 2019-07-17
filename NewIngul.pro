@@ -26,10 +26,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
+    target2.cpp \
     tir.cpp
 
 HEADERS += \
         mainwindow.h \
+    target2.h \
     tir.h \
     target.h
 
