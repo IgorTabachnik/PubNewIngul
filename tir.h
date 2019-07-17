@@ -28,7 +28,7 @@ private:
 
     QList<Target> targets;
     QList<Target2*> targets2;
-    QList<QPointF> bullets;
+    //QList<QPointF> bullets;
     QList<int> focused_targets;
     QList<BulletInfo> bullets;
 

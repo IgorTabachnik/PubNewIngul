@@ -10,7 +10,7 @@ public:
         circle, chest, torso, body
     };
 
-private:
+//private:
     target_type type;
     QPointF position;
     QPointF size;

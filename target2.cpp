@@ -79,6 +79,9 @@ bool Target2::event(QEvent* event)
             LoadTexture(body);
             event->accept();
         return true;
+
+        default:
+        return QWidget::event(event);
     }
-    return QWidget::event(event);
+
 }
