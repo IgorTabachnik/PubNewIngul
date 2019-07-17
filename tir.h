@@ -8,6 +8,7 @@
 #include <QList>
 #include <QApplication>
 #include "target.h"
+#include "target2.h"
 #include "bullet_info.h"
 
 namespace Ui {
@@ -19,13 +20,15 @@ class Tir : public QWidget
     Q_OBJECT
 
 public:
-    explicit Tir(int updateInterval = 33, QWidget *parent = 0);
+    explicit Tir(int updateInterval = 33, QWidget *parent = nullptr);
     ~Tir();
 
 private:
     Ui::Tir *ui;
 
     QList<Target> targets;
+    QList<Target2*> targets2;
+    QList<QPointF> bullets;
     QList<int> focused_targets;
     QList<BulletInfo> bullets;
 
