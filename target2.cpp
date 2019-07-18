@@ -1,9 +1,15 @@
 #include "target2.h"
 
+#define PIXELS_PER_SPEED 500
+
 Target2::Target2(QWidget *parent) : QWidget(parent)
 {
     setAttribute(Qt::WA_Hover);
     LoadImage();
+    anim = new QPropertyAnimation(this,"geometry");
+    anim->setDuration(1000);
+    anim->setEasingCurve(QEasingCurve::Linear);
+    curr_speed = 1000;
 }
 
 void Target2::LoadImage()
@@ -41,9 +47,42 @@ void Target2::LoadTexture(target_type target)
             break;
     }
 
-    this->texture = img.copy(text).scaled(width(),height(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation);
+    this->texture = img.copy(text).scaled(width(),height()/*,Qt::IgnoreAspectRatio,Qt::SmoothTransformation*/);
     mask = texture.createMaskFromColor(QColor(0,0,0,0));
     setMask(mask);
+}
+
+void Target2::SetMovements(QList<QPointF> move)
+{
+    disconnect(anim,&QPropertyAnimation::finished,this,&Target2::NextAnimation);
+    anim->stop();
+    movements.clear();
+    foreach(QPointF point,move)
+    {
+        movements.append(QRectF(point - QPointF(geometry().width()/2,geometry().height()/2),geometry().size())); //set coordinates to 0 point
+    }
+    curr_animation = 0;
+    connect(anim,&QPropertyAnimation::finished,this,&Target2::NextAnimation);
+    anim->setStartValue(geometry());
+    anim->setEndValue(movements[0]);
+    anim->setDuration(QLineF(geometry().topLeft(),movements[0].topLeft()).length()*curr_speed/PIXELS_PER_SPEED);
+    anim->start();
+}
+
+void Target2::SetSpeed(int speed)
+{
+    curr_speed = speed;
+}
+
+void Target2::NextAnimation()
+{
+
+    anim->setStartValue(movements[curr_animation]);
+    anim->setDuration(QLineF(movements[curr_animation].topLeft(),movements[(curr_animation+1)%movements.length()].topLeft()).length()*curr_speed/PIXELS_PER_SPEED);
+    curr_animation++;
+    curr_animation%=movements.length();
+    anim->setEndValue(movements[curr_animation]);
+    anim->start();
 }
 
 void Target2::paintEvent(QPaintEvent *event)

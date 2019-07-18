@@ -6,6 +6,7 @@
 #include <QEvent>
 #include <QPaintEvent>
 #include <QBitmap>
+#include <QPropertyAnimation>
 
 class Target2 : public QWidget
 {
@@ -16,6 +17,8 @@ public:
     explicit Target2(QWidget *parent = nullptr);
     void LoadImage();
     void LoadTexture(target_type target);
+    void SetMovements(QList<QPointF>);
+
 
 private:
     target_type type;
@@ -25,10 +28,16 @@ private:
     QPixmap texture;
     QBitmap mask;
     QList<QPointF> bullets;
+    QList<QRectF> movements;
+    QPropertyAnimation *anim;
+    uint16_t curr_animation;
+    uint16_t curr_speed;
 
 signals:
 
 public slots:
+    void NextAnimation();
+    void SetSpeed(int speed);
 };
 
 #endif // TARGET2_H

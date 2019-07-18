@@ -1,6 +1,7 @@
 #include "tir.h"
 #include "ui_tir.h"
 #include <QThread>
+#include <QSpinBox>
 //#include <QRect>
 //#include <QDebug>
 
@@ -15,6 +16,15 @@ Tir::Tir(int updateInterval, QWidget *parent) :
     targets2.append(new Target2(this));
     targets2[0]->setGeometry(300,300,150,150);
     targets2[0]->LoadTexture(Target2::chest);
+
+    //points fo animation
+    targets2[0]->SetMovements({{0,0},
+                               {0,static_cast<qreal>(geometry().height())},
+                               {static_cast<qreal>(geometry().width()),static_cast<qreal>(geometry().height())},
+                               {static_cast<qreal>(geometry().width()),0}});
+
+    //speed changer
+    connect(ui->speed,static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),targets2[0],&Target2::SetSpeed);
 
 }
 
