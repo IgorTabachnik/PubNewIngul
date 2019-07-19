@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT     += core gui
+CONFIG += console
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,13 +27,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    tir.cpp
+    tir.cpp \
+    targetconstants.cpp
 
 HEADERS += \
         mainwindow.h \
     tir.h \
     target.h \
-    bullet_info.h
+    bullet_info.h \
+    targetconstants.h
 
 FORMS += \
         mainwindow.ui \

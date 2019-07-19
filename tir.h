@@ -7,6 +7,7 @@
 #include <QPainter>
 #include <QList>
 #include <QApplication>
+#include <QDebug>
 #include "target.h"
 #include "bullet_info.h"
 
@@ -19,12 +20,12 @@ class Tir : public QWidget
     Q_OBJECT
 
 public:
-    explicit Tir(int updateInterval = 33, QWidget *parent = 0);
+    explicit Tir(int updateInterval = 1, QWidget *parent = 0);
     ~Tir();
 
 private:
     Ui::Tir *ui;
-
+    QPolygonF poly;
     QList<Target> targets;
     QList<int> focused_targets;
     QList<BulletInfo> bullets;
@@ -32,6 +33,11 @@ private:
     void timerEvent(QTimerEvent *event) override;
     void mouseReleaseEvent(QMouseEvent * event ) override;
     void paintEvent(QPaintEvent* event);
+
+    int case_state;
+protected:
+    virtual void keyPressEvent(QKeyEvent *event);
+
 };
 
 #endif // TIR_H

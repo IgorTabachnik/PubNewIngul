@@ -2,18 +2,35 @@
 #define TARGET_H
 
 #include <QtGUI>
+#include "targetconstants.h"
 
 class Target {
-
 public:
+
+    struct StateHid
+    {
+        bool hid;
+        int score;
+
+        float Xm;
+        float Ym;
+
+        float h;
+        float Xc;
+        float Yc;
+    };
+
     enum target_type {
         circle, chest, torso, body
     };
 
-private:
-    target_type type;
+    QPointF zero;
     QPointF position;
     QPointF size;
+    QPolygonF poly_m;
+    bool fix;
+private:
+    target_type type;
     QPixmap img;
     QPixmap texture;
 
@@ -25,16 +42,16 @@ private:
         float x, y, w, h;
         switch (this->type) {
             case circle:
-                x = 110;
-                y = 90;
-                w = 415;
-                h = 415;
+                x = 112;
+                y = 89;
+                w = 412;
+                h = 412;
                 break;
             case chest:
-                x = 100;
-                y = 690;
-                w = 425;
-                h = 415;
+                x = 104;
+                y = 688;
+                w = 426;
+                h = 413;
                 break;
             case torso:
                 x = 878;
@@ -49,7 +66,6 @@ private:
                 h = 1383;
                 break;
         }
-
         this->texture = img.copy(x, y, w, h);
     }
 
@@ -60,7 +76,7 @@ public:
         this->type = type;
         this->position = position;
         this->size = size;
-
+        this->fix = false;
         if (this->type == circle && this->size.x() != this->size.y()) {
             this->size.setX(this->size.y());
         }
@@ -76,6 +92,15 @@ public:
 
     QPointF get_size () {
         return this->size;
+    }
+
+    QString printPolygon(){
+        QString res;
+        for(int i=0;i<poly_m.length();i++)
+        {
+            res=QString("X%1=").arg(i) + poly_m[i].x() +" "+ QString("Y%1=").arg(i) + poly_m[i].y()+"\n";
+        }
+        return res;
     }
 
     void draw (QPainter &painter) {
@@ -94,30 +119,48 @@ public:
         painter.drawPixmap(this->position.x(), this->position.y(), this->size.x(), this->size.y(), this->texture);
     }
 
-    bool hid_detected (QPointF point) {
+    StateHid hid_detected (QPointF point) {
+        StateHid state;
         switch (this->type) {
             case circle:
-                {
-                    float hypotenuse = sqrt(pow(abs(point.x() - this->position.x() - this->size.y() / 2), 2) + pow(abs(point.y() - this->position.y() - this->size.y() / 2), 2));
-                    return hypotenuse <= this->size.x() / 2;
+                {                 
+                    state.Xc = abs(this->position.x() - this->size.x() / 2);
+                    state.Yc = abs(this->position.y() - this->size.y() / 2);
+
+                    float hypotenuse = sqrt(pow(abs(point.x() - this->position.x() - this->size.x() / 2), 2) + pow(abs(point.y() - this->position.y() - this->size.y() / 2), 2));
+                    state.hid = hypotenuse <= this->size.x() / 2;
+                    state.score = getScore(hypotenuse);
+
+                    state.Xm = point.x();
+                    state.Ym = point.y();
+                    state.h = hypotenuse;
+
+                    return state;
                 }
                 break;
             case chest:
                 {
+
                     QPolygonF poly;
-                    float rx = this->size.x() / 427;
-                    float ry = this->size.y() / 412;
+                    float rx = this->size.x() / 425;
+                    float ry = this->size.y() / 411;
 
-                    poly << QPointF(0, 153 * ry)
-                         << QPointF(144 * rx, 153 * ry)
-                         << QPointF(144 * rx, 0)
-                         << QPointF(309 * rx, 0)
-                         << QPointF(309 * rx, 153 * ry)
-                         << QPointF(425 * rx, 153 * ry)
-                         << QPointF(425 * rx, 415 * ry)
-                         << QPointF(0, 415 * ry);
+                    poly << QPointF(0, (160* ry))
+                         << QPointF((113 * rx), (160 * ry))
+                         << QPointF((113 * rx), 2)
+                         << QPointF((306 * rx), 2)
+                         << QPointF((306 * rx), (156 * ry))
+                         << QPointF((420 * rx), (156 * ry))
+                         << QPointF((420 * rx), (409 * ry))
+                         << QPointF(0, (409 * ry));
 
-                    return poly.containsPoint(point - this->position, Qt::OddEvenFill);
+                    if(!fix)
+                    {
+                        fix=true;
+                        poly_m = poly;
+                    }
+                    state.hid = poly.containsPoint(point - this->position, Qt::OddEvenFill);
+                    return state;
                 }
                 break;
             case torso:
@@ -136,8 +179,8 @@ public:
                          << QPointF(248 * rx, 985 * ry)
                          << QPointF(92 * rx, 985 * ry)
                          << QPointF(0, 693 * ry);
-
-                    return poly.containsPoint(point - this->position, Qt::OddEvenFill);
+                    state.hid = poly.containsPoint(point - this->position, Qt::OddEvenFill);
+                    return state;
                 }
                 break;
             case body:
@@ -157,14 +200,35 @@ public:
                          << QPointF(133 * rx, 1383 * ry)
                          << QPointF(0, 792 * ry);
 
-                    return poly.containsPoint(point - this->position, Qt::OddEvenFill);
+                    state.hid = poly.containsPoint(point - this->position, Qt::OddEvenFill);
+                    return state;
                 }
                 break;
         }
-
-        return false;
+        state.hid = false;
+        return state;
     }
 
+    int getScore(float h){
+        int *arr;
+        switch (this->type) {
+        case circle:
+            arr = TargetConstants::rCricle;
+            break;
+        default:
+            break;
+        }
+
+        for(int i=0;i<10;i++){
+            if(h<=arr[i])
+            {
+                return 10-i;
+            }
+        }
+        return 0;
+    }
 };
+
+//int Target::rCricle[10];
 
 #endif // TARGET_H
