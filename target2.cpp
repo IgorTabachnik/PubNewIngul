@@ -5,51 +5,16 @@
 Target2::Target2(QWidget *parent) : QWidget(parent)
 {
     setAttribute(Qt::WA_Hover);
-    LoadImage();
     anim = new QPropertyAnimation(this,"geometry");
     anim->setDuration(1000);
     anim->setEasingCurve(QEasingCurve::Linear);
     curr_speed = 1000;
 }
 
-void Target2::LoadImage()
+void Target2::LoadTexture(TargetImage *target)
 {
-    this->img.load(":/media/Target_green.png");
-}
-
-void Target2::LoadTexture(target_type target)
-{
-    QRect text;
-    switch (target) {
-        case circle:
-            text.setX(110);//x = 110;
-            text.setY(90);//y = 90;
-            text.setWidth(415);//w = 415;
-            text.setHeight(415);// = 415;
-            break;
-        case chest:
-            text.setX(100);//x = 100;
-            text.setY(690);//y = 690;
-            text.setWidth(425);//w = 425;
-            text.setHeight(415);// = 415;
-            break;
-        case torso:
-            text.setX(878);//x = 878;
-            text.setY(106);//y = 106;
-            text.setWidth(326);//w = 326;
-            text.setHeight(985);//h = 985;
-            break;
-        case body:
-            text.setX(1470);//x = 1470;
-            text.setY(142);//y = 142;
-            text.setWidth(383);//w = 383;
-            text.setHeight(1383);// = 1383;
-            break;
-    }
-
-    this->texture = img.copy(text).scaled(width(),height()/*,Qt::IgnoreAspectRatio,Qt::SmoothTransformation*/);
-    mask = texture.createMaskFromColor(QColor(0,0,0,0));
-    setMask(mask);
+    this->target = target;
+    setMask(target->mask.scaled(width(),height()));
 }
 
 void Target2::SetMovements(QList<QPointF> move)
@@ -89,7 +54,8 @@ void Target2::paintEvent(QPaintEvent *event)
 {
 
     QPainter painter(this);
-    painter.drawPixmap(0, 0, this->width(), this->height(), texture);
+    //painter.drawPixmap(0,0,target->texture);
+    painter.drawPixmap(0, 0, this->width(), this->height(), target->texture);
 
     painter.setPen(Qt::NoPen);
     painter.setBrush(QBrush(Qt::red, Qt::SolidPattern));

@@ -27,11 +27,13 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     target2.cpp \
+    target_info.cpp \
     tir.cpp
 
 HEADERS += \
         mainwindow.h \
     target2.h \
+    target_info.h \
     tir.h \
     target.h \
     bullet_info.h
