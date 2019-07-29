@@ -1,12 +1,13 @@
-#include "mainwindow.h"
 #include <QApplication>
 #include <QCursor>
 #include <QLabel>
+#include "choicewindow.h"
+#include "mainwindow.h"
 #include "tir.h"
 
-//class CursorPosition : public QWidget
+// class CursorPosition : public QWidget
 //{
-//public:
+// public:
 //    explicit CursorPosition(int updateInterval = 100, QWidget *parent =0)
 //        :QWidget(parent),
 //          position(new QLabel(this))
@@ -20,19 +21,18 @@
 //        QPoint p = QCursor::pos();
 //        position->setText(QString("%1;%2").arg(p.x()).arg(p.y()));
 //    }
-//private:
+// private:
 //    QLabel *position;
 //};
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
+int main(int argc, char *argv[]) {
+  QApplication a(argc, argv);
 
-//    MainWindow w;
-//    w.show();
+  //    MainWindow w;
+  //    w.show();
 
-    Tir t;
-    t.show();
+  MainWindow t;
+  t.show();
 
-    return a.exec();
+  return a.exec();
 }

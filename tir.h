@@ -1,38 +1,48 @@
 #ifndef TIR_H
 #define TIR_H
 
-#include <QWidget>
-#include <QLabel>
-#include <QCursor>
-#include <QPainter>
-#include <QList>
 #include <QApplication>
-#include "target2.h"
+#include <QCursor>
+#include <QLabel>
+#include <QList>
+#include <QPainter>
+#include <QTimer>
+#include <QWidget>
 #include "bullet_info.h"
-#include "target_info.h"
+#include "target.h"
 
 namespace Ui {
 class Tir;
 }
 
-class Tir : public QWidget
-{
-    Q_OBJECT
+class Tir : public QWidget {
+  Q_OBJECT
 
-public:
-    explicit Tir(int updateInterval = 33, QWidget *parent = nullptr);
-    ~Tir();
-
-private:
-    Ui::Tir *ui;
-
-    QList<Target2*> targets2;
-    QList<int> focused_targets;
-    TargetInfo target;
+ public:
+  explicit Tir(int updateInterval = 33, QWidget *parent = nullptr);
+  ~Tir() override;
+  void AddTargetsChest(int countOfTargets);
+  void AddTargetsCircle(int countOfTargets);
+  void AddTargetsTorso(int countOfTargets);
+  void AddTargetsBody(int countOfTargets);
+public slots:
+  void ChangePos();
 
 private slots:
-    void ChangeColor();
+  void on_pushButton_clicked();
 
+private:
+  QTimer * timer ;
+  Ui::Tir *ui;
+  QList<Target> targets;
+  QList<int> focused_targets;
+  QList<BulletInfo> bullets;
+  int countOfTargets_;
+  void timerEvent(QTimerEvent *event) override;
+  void mouseReleaseEvent(QMouseEvent *event) override;
+  void paintEvent(QPaintEvent *event) override;
+   QBrush * brush;
+   QPalette * palette;
 };
 
-#endif // TIR_H
+#endif  // TIR_H

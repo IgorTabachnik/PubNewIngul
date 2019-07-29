@@ -7,9 +7,10 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
+CONFIG += C++17
 TARGET = NewIngul
 TEMPLATE = app
+QMAKE_CXXFLAGS += -std=c++17
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
@@ -26,21 +27,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    target2.cpp \
-    target_info.cpp \
-    tir.cpp
+    tir.cpp \
+    choicewindow.cpp
 
 HEADERS += \
         mainwindow.h \
-    target2.h \
-    target_info.h \
     tir.h \
     target.h \
-    bullet_info.h
+    bullet_info.h \
+    choicewindow.h
 
 FORMS += \
         mainwindow.ui \
-    tir.ui
+    tir.ui \
+    choicewindow.ui
 
 RESOURCES += \
     images.qrc
