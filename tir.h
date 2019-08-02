@@ -7,9 +7,9 @@
 #include <QPainter>
 #include <QList>
 #include <QApplication>
-#include "target.h"
 #include "target2.h"
 #include "bullet_info.h"
+#include "target_info.h"
 
 namespace Ui {
 class Tir;
@@ -26,15 +26,13 @@ public:
 private:
     Ui::Tir *ui;
 
-    QList<Target> targets;
     QList<Target2*> targets2;
-    QList<QPointF> bullets;
     QList<int> focused_targets;
-    QList<BulletInfo> bullets;
+    TargetInfo target;
 
-    void timerEvent(QTimerEvent *event) override;
-    void mouseReleaseEvent(QMouseEvent * event ) override;
-    void paintEvent(QPaintEvent* event);
+private slots:
+    void ChangeColor();
+
 };
 
 #endif // TIR_H
