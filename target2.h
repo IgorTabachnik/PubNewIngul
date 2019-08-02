@@ -28,6 +28,7 @@ private:
     QPropertyAnimation *anim;
     uint16_t curr_animation;
     uint16_t curr_speed;
+    QPixmap pixmap;
 
 signals:
 

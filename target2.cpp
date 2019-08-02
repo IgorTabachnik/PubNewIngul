@@ -1,4 +1,5 @@
 #include "target2.h"
+#include <QtSvg>
 
 #define PIXELS_PER_SPEED 500
 
@@ -15,6 +16,7 @@ void Target2::LoadTexture(TargetImage *target)
 {
     this->target = target;
     setMask(target->mask.scaled(width(),height()));
+
 }
 
 void Target2::SetMovements(QList<QPointF> move)
@@ -53,7 +55,10 @@ void Target2::NextAnimation()
 void Target2::paintEvent(QPaintEvent *event)
 {
 
+    event->accept();
     QPainter painter(this);
+    //QSvgRenderer rend(QString(":/media/Circles.svg"));
+    //rend.render(&painter);
     //painter.drawPixmap(0,0,target->texture);
     painter.drawPixmap(0, 0, this->width(), this->height(), target->texture);
 
@@ -63,12 +68,6 @@ void Target2::paintEvent(QPaintEvent *event)
     for (int i = 0; i < this->bullets.length(); i++)
     {
         painter.drawEllipse(this->bullets[i] - QPointF(1.5, 1.5), 3, 3);
-    }
-    switch(event->type())
-    {
-        default:
-        QWidget::paintEvent(event);
-        break;
     }
 }
 

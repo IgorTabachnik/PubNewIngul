@@ -20,6 +20,7 @@ public:
     TargetImage circle;
     TargetImage torso;
     TargetImage chest;
+    TargetImage svg_test;
     QColor current_color;
     QList<TargetImage*> targets;
 

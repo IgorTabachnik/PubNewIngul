@@ -1,6 +1,7 @@
 #include "target_info.h"
 #include <QImage>
 #include <QPainter>
+#include <QtSvg>
 
 TargetInfo::TargetInfo()
 {
@@ -9,6 +10,7 @@ TargetInfo::TargetInfo()
     targets.append(&chest);
     targets.append(&torso);
     targets.append(&body);
+    targets.append(&svg_test);
 }
 
 void TargetInfo::LoadTargets()
@@ -32,6 +34,15 @@ void TargetInfo::LoadTargets()
     body.mask = body.texture.createMaskFromColor(QColor(0,0,0,0));
     body.color_mask = body.texture.createMaskFromColor(current_color,Qt::MaskOutColor);
 
+    QSvgRenderer rend(QString(":/media/Circles.svg"));
+    QImage img(2048,2048,QImage::Format::Format_ARGB32);
+    img.fill(0x00);
+    QPainter painter(&img);
+    rend.render(&painter);
+
+    svg_test.texture = QPixmap::fromImage(img);
+    svg_test.mask = svg_test.texture.createMaskFromColor(QColor(0,0,0,0));
+    svg_test.color_mask = svg_test.texture.createMaskFromColor(img.pixel(img.width()/2,img.height()/2),Qt::MaskOutColor);
 
 }
 

@@ -10,5 +10,6 @@
         <file>media/Target_pink.png</file>
         <file>media/unchecked.png</file>
         <file>media/vodopad.jpg</file>
+        <file>media/Circles.svg</file>
     </qresource>
 </RCC>

@@ -28,7 +28,8 @@ Tir::Tir(int updateInterval, QWidget *parent) :
     {
         targets2.append(new Target2(this));
         targets2[i]->setGeometry(300,300,150,150);
-        targets2[i]->LoadTexture(target.targets[rand.generate()%target.targets.length()]);
+        targets2[i]->LoadTexture(&target.svg_test);
+        //targets2[i]->LoadTexture(target.targets[rand.generate()%target.targets.length()]);
         points.clear();
 
         //points fo animation
