@@ -14,27 +14,30 @@ class Target2 : public QWidget
     Q_OBJECT
 public:
 
-    explicit Target2(QWidget *parent = nullptr);
-    void LoadTexture(TargetImage *target);
+    explicit Target2(TargetInfo *t_info, QWidget *parent = nullptr);
     void SetMovements(QList<QPointF>);
+
 
 
 private:
     bool event(QEvent* event);
     void paintEvent(QPaintEvent* event);
-    TargetImage *target;
+    TargetInfo* t_info;
     QList<QPointF> bullets;
-    QList<QRectF> movements;
+    QList<QPointF> movements;
     QPropertyAnimation *anim;
     uint16_t curr_animation;
     uint16_t curr_speed;
     QPixmap pixmap;
+    uint8_t percent;
 
 signals:
+    void TargetEndSignal();
 
 public slots:
     void NextAnimation();
     void SetSpeed(int speed);
+    void SetSize(int percent);
 };
 
 #endif // TARGET2_H

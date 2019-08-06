@@ -22,13 +22,13 @@ Tir::Tir(int updateInterval, QWidget *parent) :
     connect(ui->green_slider,&QSlider::valueChanged,this,&Tir::ChangeColor);
     connect(ui->blue_slider,&QSlider::valueChanged,this,&Tir::ChangeColor);
 
+
     QList<QPointF> points;
 
     for(int i = 0;i<10;++i)
     {
-        targets2.append(new Target2(this));
-        targets2[i]->setGeometry(300,300,150,150);
-        targets2[i]->LoadTexture(&target.svg_test);
+        targets2.append(new Target2(&target,this));
+        //targets2[i]->setGeometry(300,300,150,150);
         //targets2[i]->LoadTexture(target.targets[rand.generate()%target.targets.length()]);
         points.clear();
 
@@ -38,6 +38,7 @@ Tir::Tir(int updateInterval, QWidget *parent) :
 
         targets2[i]->SetMovements(points);
         connect(ui->speed,static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),targets2[i],&Target2::SetSpeed);
+        connect(ui->size,static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),targets2[i],&Target2::SetSize);
     }
 
 }
@@ -50,5 +51,9 @@ Tir::~Tir()
 void Tir::ChangeColor()
 {
     target.ChangeColor(QColor(ui->red_slider->value(),ui->green_slider->value(),ui->blue_slider->value()));
+    for(int i = 0;i<targets2.length();++i)
+    {
+        targets2[i]->repaint();
+    }
 }
 

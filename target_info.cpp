@@ -11,6 +11,7 @@ TargetInfo::TargetInfo()
     targets.append(&torso);
     targets.append(&body);
     targets.append(&svg_test);
+    targets.append(&curr_target);
 }
 
 void TargetInfo::LoadTargets()
@@ -34,8 +35,8 @@ void TargetInfo::LoadTargets()
     body.mask = body.texture.createMaskFromColor(QColor(0,0,0,0));
     body.color_mask = body.texture.createMaskFromColor(current_color,Qt::MaskOutColor);
 
-    QSvgRenderer rend(QString(":/media/Circles.svg"));
-    QImage img(2048,2048,QImage::Format::Format_ARGB32);
+    QSvgRenderer rend(QString(":/media/Body.svg"));
+    QImage img(rend.defaultSize().width()*2,rend.defaultSize().height()*2,QImage::Format::Format_ARGB32);
     img.fill(0x00);
     QPainter painter(&img);
     rend.render(&painter);
@@ -44,6 +45,7 @@ void TargetInfo::LoadTargets()
     svg_test.mask = svg_test.texture.createMaskFromColor(QColor(0,0,0,0));
     svg_test.color_mask = svg_test.texture.createMaskFromColor(img.pixel(img.width()/2,img.height()/2),Qt::MaskOutColor);
 
+    curr_target = svg_test;
 }
 
 void TargetInfo::ChangeColor(QColor color)

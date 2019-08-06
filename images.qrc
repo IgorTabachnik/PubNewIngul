@@ -11,5 +11,6 @@
         <file>media/unchecked.png</file>
         <file>media/vodopad.jpg</file>
         <file>media/Circles.svg</file>
+        <file>media/Body.svg</file>
     </qresource>
 </RCC>

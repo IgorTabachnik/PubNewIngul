@@ -16,6 +16,7 @@ class TargetInfo
 public:
     TargetInfo();
     void ChangeColor(QColor color);
+    TargetImage curr_target;
     TargetImage body;
     TargetImage circle;
     TargetImage torso;
