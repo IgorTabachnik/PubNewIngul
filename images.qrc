@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>media/checked.png</file>
+        <file>media/fon_town.bmp</file>
+        <file>media/music.ogg</file>
+        <file>media/shoot.ogg</file>
+        <file>media/Target_blue.png</file>
+        <file>media/Target_brown.png</file>
+        <file>media/Target_green.png</file>
+        <file>media/Target_pink.png</file>
+        <file>media/unchecked.png</file>
+        <file>media/vodopad.jpg</file>
+        <file>media/Circles.svg</file>
+    </qresource>
+</RCC>
