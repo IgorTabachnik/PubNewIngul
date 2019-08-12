@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Games</class>
+ <widget class="QWidget" name="Games">
+  <property name="geometry">
+   <rect>
+    <x>4</x>
+    <y>23</y>
+    <width>792</width>
+    <height>447</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Игры со стрельбой </string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox { 
+     border: 1px solid gray; 
+     border-radius: 4px; 
+   margin-top: 10px;
+ } 
+QGroupBox::title { 
+    background-color: #aaaaaa /*transparent*/;
+     subcontrol-position: top left; /* position at the top left*/ 
+     padding:2 13px;
+     top: -10px;
+    left: 8px;
+ } 
+   </string>
+  </property>
+  <widget class="QPushButton" name="Bend">
+  <property name="geometry">
+   <rect>
+    <x>688</x>
+    <y>392</y>
+    <width>89</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Выход</string>
+  </property>
+  <property name="toolTip">
+   <string>Возврат в главное меню.</string>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="P4">
+  <property name="geometry">
+   <rect>
+    <x>12</x>
+    <y>0</y>
+    <width>765</width>
+    <height>369</height>
+   </rect>
+  </property>
+  <widget class="QPushButton" name="U15">
+  <property name="geometry">
+   <rect>
+    <x>612</x>
+    <y>248</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Упр15</string>
+  </property>
+  <property name="toolTip">
+   <string>Поясная №1а, 10м, 8 патронов, 10сек, двойными с уходами.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U14">
+  <property name="geometry">
+   <rect>
+    <x>465</x>
+    <y>248</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Упр14</string>
+  </property>
+  <property name="toolTip">
+   <string>Три поясные фигуры №2, 10м, 2магазина по 4 патрона, 18сек, в бронежилете с перезарядкой.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U13">
+  <property name="geometry">
+   <rect>
+    <x>318</x>
+    <y>248</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Упр13</string>
+  </property>
+  <property name="toolTip">
+   <string>Поясная фигура №2, 10м, 3 патрона, 5сек, с разворотом.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U12">
+  <property name="geometry">
+   <rect>
+    <x>171</x>
+    <y>248</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Упр12</string>
+  </property>
+  <property name="toolTip">
+   <string>Поясная фигура №2, 10м, 4 патрона, 6сек,двойными с уходом.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U11">
+  <property name="geometry">
+   <rect>
+    <x>24</x>
+    <y>248</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Упр11</string>
+  </property>
+  <property name="toolTip">
+   <string>Поясная фигура №2, 10м, 3 патрона, 6сек, с разворотом.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U10">
+  <property name="geometry">
+   <rect>
+    <x>612</x>
+    <y>132</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Упр10</string>
+  </property>
+  <property name="toolTip">
+   <string>Три поясные фигуры №1, 10м, 6 патронов, 8сек.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U1">
+  <property name="geometry">
+   <rect>
+    <x>24</x>
+    <y>20</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Лото</string>
+  </property>
+  <property name="toolTip">
+   <string>Лото.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U2">
+  <property name="geometry">
+   <rect>
+    <x>171</x>
+    <y>20</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Пьяница</string>
+  </property>
+  <property name="toolTip">
+   <string>Старшая карта берет все.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U3">
+  <property name="geometry">
+   <rect>
+    <x>318</x>
+    <y>20</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Очко</string>
+  </property>
+  <property name="toolTip">
+   <string>Набрать 21 очко без перебора.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U4">
+  <property name="geometry">
+   <rect>
+    <x>465</x>
+    <y>20</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Ведьма</string>
+  </property>
+  <property name="toolTip">
+   <string>У кого дама теряет все.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U5">
+  <property name="geometry">
+   <rect>
+    <x>612</x>
+    <y>20</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Морской бой</string>
+  </property>
+  <property name="toolTip">
+   <string>Известный всем Морской бой.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U6">
+  <property name="geometry">
+   <rect>
+    <x>24</x>
+    <y>132</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Крестик-нолик</string>
+  </property>
+  <property name="toolTip">
+   <string>Игра Крестики-Нолики.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U7">
+  <property name="geometry">
+   <rect>
+    <x>171</x>
+    <y>132</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Дуэль</string>
+  </property>
+  <property name="toolTip">
+   <string>Первым поразить мишень противника.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U8">
+  <property name="geometry">
+   <rect>
+    <x>318</x>
+    <y>132</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Упр8</string>
+  </property>
+  <property name="toolTip">
+   <string>Катящееся колесо, 15м, 3 патрона, 5сек.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="U9">
+  <property name="geometry">
+   <rect>
+    <x>465</x>
+    <y>132</y>
+    <width>128</width>
+    <height>96</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Упр9</string>
+  </property>
+  <property name="toolTip">
+   <string>Ростовая №8, 25...10м, 3 патрона, 25сек после пробежки.</string>
+  </property>
+  </widget>
+  </widget>
+  </widget>
+ <resources/>
+ <connections/>
+</ui>
+

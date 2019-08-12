@@ -43,7 +43,27 @@ HEADERS += \
 FORMS += \
         mainwindow.ui \
     tir.ui \
-    formgroup.ui
+    formgroup.ui \
+    originalTirUI/Film.ui \
+    originalTirUI/Game1.ui \
+    originalTirUI/Game2.ui \
+    originalTirUI/Game3.ui \
+    originalTirUI/Game4.ui \
+    originalTirUI/Game5.ui \
+    originalTirUI/Game6.ui \
+    originalTirUI/Game7.ui \
+    originalTirUI/Games.ui \
+    originalTirUI/Liss.ui \
+    originalTirUI/Param.ui \
+    originalTirUI/Stand.ui \
+    originalTirUI/Start.ui \
+    originalTirUI/T3dat.ui \
+    originalTirUI/T6dat.ui \
+    originalTirUI/Uprav.ui \
+    originalTirUI/Vrez.ui \
+    originalTirUI/Calnd.ui \
+    originalTirUI/EdTarg.ui \
+    originalTirUI/EdUpr.ui
 
 RESOURCES += \
     images.qrc

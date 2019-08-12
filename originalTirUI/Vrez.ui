@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Vrez</class>
+ <widget class="QWidget" name="Vrez">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>792</width>
+    <height>632</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Анализ результатов стрельбы</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox { 
+     border: 1px solid gray; 
+     border-radius: 4px; 
+   margin-top: 10px;
+ } 
+QGroupBox::title { 
+    background-color: #aaaaaa /*transparent*/;
+     subcontrol-position: top left; /* position at the top left*/ 
+     padding:2 13px;
+     top: -10px;
+    left: 8px;
+ } 
+   </string>
+  </property>
+  <widget class="QGraphicsView" name="P2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>41</width>
+    <height>33</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QGroupBox" name="Fr1">
+  <property name="geometry">
+   <rect>
+    <x>12</x>
+    <y>408</y>
+    <width>773</width>
+    <height>45</height>
+   </rect>
+  </property>
+  <property name="title">
+   <string>Управление просмотром</string>
+  </property>
+  <property name="flat">
+   <bool>false</bool>
+  </property>
+  <property name="checkable">
+   <bool>false</bool>
+  </property>
+  <widget class="QPushButton" name="Czaprez">
+  <property name="geometry">
+   <rect>
+    <x>556</x>
+    <y>16</y>
+    <width>97</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Запись</string>
+  </property>
+  <property name="toolTip">
+   <string>Запись результатов стреьбы.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cend">
+  <property name="geometry">
+   <rect>
+    <x>664</x>
+    <y>16</y>
+    <width>97</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Выход</string>
+  </property>
+  <property name="toolTip">
+   <string>Возврат в главное меню.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Ckadr">
+  <property name="geometry">
+   <rect>
+    <x>120</x>
+    <y>16</y>
+    <width>97</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Выстрелы</string>
+  </property>
+  <property name="toolTip">
+   <string>Показ всех выстрелов по очереди с остановками.</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cfilm">
+  <property name="geometry">
+   <rect>
+    <x>12</x>
+    <y>16</y>
+    <width>97</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Непрерывно</string>
+  </property>
+  <property name="toolTip">
+   <string>Показ всех выстрелов без остановок.</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Trez">
+  <property name="geometry">
+   <rect>
+    <x>232</x>
+    <y>16</y>
+    <width>309</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Результат стрельбы</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  </widget>
+  <widget class="QGraphicsView" name="Pm">
+  <property name="geometry">
+   <rect>
+    <x>16</x>
+    <y>16</y>
+    <width>757</width>
+    <height>385</height>
+   </rect>
+  </property>
+  <widget class="QLabel" name="Locenka">
+  <property name="geometry">
+   <rect>
+    <x>684</x>
+    <y>280</y>
+    <width>29</width>
+    <height>29</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Ldelta">
+  <property name="geometry">
+   <rect>
+    <x>656</x>
+    <y>216</y>
+    <width>57</width>
+    <height>29</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lmimo">
+  <property name="geometry">
+   <rect>
+    <x>660</x>
+    <y>148</y>
+    <width>53</width>
+    <height>29</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lpopal">
+  <property name="geometry">
+   <rect>
+    <x>660</x>
+    <y>92</y>
+    <width>53</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lstraf">
+  <property name="geometry">
+   <rect>
+    <x>280</x>
+    <y>148</y>
+    <width>53</width>
+    <height>29</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lvsego">
+  <property name="geometry">
+   <rect>
+    <x>280</x>
+    <y>92</y>
+    <width>53</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lb1">
+  <property name="geometry">
+   <rect>
+    <x>73</x>
+    <y>88</y>
+    <width>265</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+      <underline>true</underline>
+      <italic>true</italic>
+     </font>
+  </property>
+  <property name="text">
+   <string>Выстрелов :</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lb6">
+  <property name="geometry">
+   <rect>
+    <x>453</x>
+    <y>276</y>
+    <width>265</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+      <underline>true</underline>
+      <italic>true</italic>
+     </font>
+  </property>
+  <property name="text">
+   <string>Оценка :</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lb4">
+  <property name="geometry">
+   <rect>
+    <x>73</x>
+    <y>144</y>
+    <width>265</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+      <underline>true</underline>
+      <italic>true</italic>
+     </font>
+  </property>
+  <property name="text">
+   <string>Штрафных :</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lb5">
+  <property name="geometry">
+   <rect>
+    <x>73</x>
+    <y>212</y>
+    <width>645</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+      <underline>true</underline>
+      <italic>true</italic>
+     </font>
+  </property>
+  <property name="text">
+   <string>Среднее отклонение  пули в cм</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lb3">
+  <property name="geometry">
+   <rect>
+    <x>453</x>
+    <y>144</y>
+    <width>265</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+      <underline>true</underline>
+      <italic>true</italic>
+     </font>
+  </property>
+  <property name="text">
+   <string>Промахов :</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lb2">
+  <property name="geometry">
+   <rect>
+    <x>453</x>
+    <y>88</y>
+    <width>265</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+      <underline>true</underline>
+      <italic>true</italic>
+     </font>
+  </property>
+  <property name="text">
+   <string>Попаданий :</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lupr">
+  <property name="geometry">
+   <rect>
+    <x>73</x>
+    <y>28</y>
+    <width>645</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+      <underline>true</underline>
+      <italic>true</italic>
+     </font>
+  </property>
+  <property name="text">
+   <string>№ упражнения</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lb7">
+  <property name="geometry">
+   <rect>
+    <x>73</x>
+    <y>276</y>
+    <width>265</width>
+    <height>37</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+      <underline>true</underline>
+      <italic>true</italic>
+     </font>
+  </property>
+  <property name="text">
+   <string>Фамилия</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  </widget>
+  <widget class="QLabel" name="MC2">
+  <property name="geometry">
+   <rect>
+    <x>212</x>
+    <y>472</y>
+    <width>49</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>MCIWndX.MCIWnd</string>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="P1">
+  <property name="geometry">
+   <rect>
+    <x>20</x>
+    <y>460</y>
+    <width>41</width>
+    <height>33</height>
+   </rect>
+  </property>
+  </widget>
+  </widget>
+ <resources/>
+ <connections/>
+</ui>
+

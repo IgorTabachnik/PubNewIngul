@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Film</class>
+ <widget class="QWidget" name="Film">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>792</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Мультимедийный тир "Ингул" - программа управления стрельбой.        Кировоград,ООО "ГЕРЦ" тел. 8-0522-226753</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox { 
+     border: 1px solid gray; 
+     border-radius: 4px; 
+   margin-top: 10px;
+ } 
+QGroupBox::title { 
+    background-color: #aaaaaa /*transparent*/;
+     subcontrol-position: top left; /* position at the top left*/ 
+     padding:2 13px;
+     top: -10px;
+    left: 8px;
+ } 
+   </string>
+  </property>
+  <widget class="QGraphicsView" name="Picfon">
+  <property name="geometry">
+   <rect>
+    <x>16</x>
+    <y>512</y>
+    <width>67</width>
+    <height>23</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QGroupBox" name="Fr1">
+  <property name="geometry">
+   <rect>
+    <x>4</x>
+    <y>428</y>
+    <width>761</width>
+    <height>77</height>
+   </rect>
+  </property>
+  <property name="title">
+   <string>команда</string>
+  </property>
+  <property name="flat">
+   <bool>false</bool>
+  </property>
+  <property name="checkable">
+   <bool>false</bool>
+  </property>
+  <widget class="QCheckBox" name="Cplay">
+  <property name="geometry">
+   <rect>
+    <x>16</x>
+    <y>32</y>
+    <width>69</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Игра</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cclear">
+  <property name="geometry">
+   <rect>
+    <x>648</x>
+    <y>32</y>
+    <width>93</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Возврат</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Canal">
+  <property name="geometry">
+   <rect>
+    <x>96</x>
+    <y>32</y>
+    <width>101</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Результат</string>
+  </property>
+  <property name="toolTip">
+   <string>Анализ результатов стрельбы для последнего упражнения и запись в базу</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Ccont">
+  <property name="geometry">
+   <rect>
+    <x>212</x>
+    <y>32</y>
+    <width>105</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Непрерывно</string>
+  </property>
+  <property name="toolTip">
+   <string>Начинать сначала фильм автоматически</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Labr">
+  <property name="geometry">
+   <rect>
+    <x>332</x>
+    <y>16</y>
+    <width>305</width>
+    <height>53</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string> </string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  <property name="toolTip">
+   <string>Окно результата последнего выстрела.</string>
+  </property>
+  </widget>
+  </widget>
+  <widget class="QLabel" name="MC">
+  <property name="geometry">
+   <rect>
+    <x>12</x>
+    <y>452</y>
+    <width>37</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>MCIWndX.MCIWnd</string>
+  </property>
+  </widget>
+  </widget>
+ <resources/>
+ <connections/>
+</ui>
+

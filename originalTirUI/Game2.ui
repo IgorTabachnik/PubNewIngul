@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Game2</class>
+ <widget class="QWidget" name="Game2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>6</y>
+    <width>792</width>
+    <height>419</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Карточная игра Пьяница </string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox { 
+     border: 1px solid gray; 
+     border-radius: 4px; 
+   margin-top: 10px;
+ } 
+QGroupBox::title { 
+    background-color: #aaaaaa /*transparent*/;
+     subcontrol-position: top left; /* position at the top left*/ 
+     padding:2 13px;
+     top: -10px;
+    left: 8px;
+ } 
+   </string>
+  </property>
+  <widget class="QPushButton" name="Cnew">
+  <property name="geometry">
+   <rect>
+    <x>584</x>
+    <y>392</y>
+    <width>89</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Begin</string>
+  </property>
+  <property name="toolTip">
+   <string>Начать новую игру.</string>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Pmish1">
+  <property name="geometry">
+   <rect>
+    <x>12</x>
+    <y>332</y>
+    <width>52</width>
+    <height>75</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QLabel" name="MMC">
+  <property name="geometry">
+   <rect>
+    <x>232</x>
+    <y>356</y>
+    <width>37</width>
+    <height>33</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>MCIWndX.MCIWnd</string>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Pmish2">
+  <property name="geometry">
+   <rect>
+    <x>80</x>
+    <y>332</y>
+    <width>47</width>
+    <height>67</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Pmish">
+  <property name="geometry">
+   <rect>
+    <x>180</x>
+    <y>356</y>
+    <width>33</width>
+    <height>35</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Bend">
+  <property name="geometry">
+   <rect>
+    <x>688</x>
+    <y>392</y>
+    <width>89</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Выход</string>
+  </property>
+  <property name="toolTip">
+   <string>Возврат в главное меню.</string>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="P4">
+  <property name="geometry">
+   <rect>
+    <x>48</x>
+    <y>0</y>
+    <width>698</width>
+    <height>324</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Ltr">
+  <property name="geometry">
+   <rect>
+    <x>748</x>
+    <y>204</y>
+    <width>41</width>
+    <height>33</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>24</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Ltl">
+  <property name="geometry">
+   <rect>
+    <x>4</x>
+    <y>204</y>
+    <width>41</width>
+    <height>33</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>24</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lr">
+  <property name="geometry">
+   <rect>
+    <x>744</x>
+    <y>288</y>
+    <width>41</width>
+    <height>33</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Ll">
+  <property name="geometry">
+   <rect>
+    <x>4</x>
+    <y>288</y>
+    <width>41</width>
+    <height>33</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>0</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Labr">
+  <property name="geometry">
+   <rect>
+    <x>340</x>
+    <y>364</y>
+    <width>437</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>9.75</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Готовность мишени</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  </widget>
+ <resources/>
+ <connections/>
+</ui>
+

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Liss</class>
+ <widget class="QWidget" name="Liss">
+  <property name="geometry">
+   <rect>
+    <x>4</x>
+    <y>23</y>
+    <width>588</width>
+    <height>376</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Список подразделений и стрелков</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox { 
+     border: 1px solid gray; 
+     border-radius: 4px; 
+   margin-top: 10px;
+ } 
+QGroupBox::title { 
+    background-color: #aaaaaa /*transparent*/;
+     subcontrol-position: top left; /* position at the top left*/ 
+     padding:2 13px;
+     top: -10px;
+    left: 8px;
+ } 
+   </string>
+  </property>
+  <widget class="QTreeView" name="TV">
+  <property name="geometry">
+   <rect>
+    <x>4</x>
+    <y>0</y>
+    <width>377</width>
+    <height>373</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cadds">
+  <property name="geometry">
+   <rect>
+    <x>388</x>
+    <y>144</y>
+    <width>193</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Add shoot</string>
+  </property>
+  <property name="toolTip">
+   <string>Добавить стрелка в подразделение</string>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tlst">
+  <property name="geometry">
+   <rect>
+    <x>388</x>
+    <y>32</y>
+    <width>193</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Наименование выбранного подразделения стрелка</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cdelp">
+  <property name="geometry">
+   <rect>
+    <x>388</x>
+    <y>280</y>
+    <width>193</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Delete list</string>
+  </property>
+  <property name="toolTip">
+   <string>Удалить все подразделение</string>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tnm">
+  <property name="geometry">
+   <rect>
+    <x>388</x>
+    <y>116</y>
+    <width>193</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Фамилия выбранного стрелка</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cdels">
+  <property name="geometry">
+   <rect>
+    <x>388</x>
+    <y>312</y>
+    <width>193</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Delete shoot</string>
+  </property>
+  <property name="toolTip">
+   <string>Удалить стрелка из списка</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Caddp">
+  <property name="geometry">
+   <rect>
+    <x>388</x>
+    <y>60</y>
+    <width>193</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Add list</string>
+  </property>
+  <property name="toolTip">
+   <string>Добавить подразделение</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cok">
+  <property name="geometry">
+   <rect>
+    <x>404</x>
+    <y>348</y>
+    <width>73</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Ok</string>
+  </property>
+  <property name="toolTip">
+   <string>использовать выбранного стрелка</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Ctxt">
+  <property name="geometry">
+   <rect>
+    <x>388</x>
+    <y>180</y>
+    <width>193</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Add from text</string>
+  </property>
+  <property name="toolTip">
+   <string>Добавить стрелков из текстового файла</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cend">
+  <property name="geometry">
+   <rect>
+    <x>496</x>
+    <y>348</y>
+    <width>73</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Exit</string>
+  </property>
+  <property name="toolTip">
+   <string>Выход из формы</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lab2">
+  <property name="geometry">
+   <rect>
+    <x>424</x>
+    <y>92</y>
+    <width>109</width>
+    <height>17</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Стрелок</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lab1">
+  <property name="geometry">
+   <rect>
+    <x>424</x>
+    <y>12</y>
+    <width>109</width>
+    <height>17</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Подразделение</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  </widget>
+ <resources/>
+ <connections/>
+</ui>
+

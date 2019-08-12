@@ -1,0 +1,1538 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EdTarg</class>
+ <widget class="QWidget" name="EdTarg">
+  <property name="geometry">
+   <rect>
+    <x>16</x>
+    <y>0</y>
+    <width>831</width>
+    <height>629</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Стрельба по многим мишеням</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox { 
+     border: 1px solid gray; 
+     border-radius: 4px; 
+   margin-top: 10px;
+ } 
+QGroupBox::title { 
+    background-color: #aaaaaa /*transparent*/;
+     subcontrol-position: top left; /* position at the top left*/ 
+     padding:2 13px;
+     top: -10px;
+    left: 8px;
+ } 
+   </string>
+  </property>
+  <widget class="QGroupBox" name="Fr1">
+  <property name="geometry">
+   <rect>
+    <x>8</x>
+    <y>418</y>
+    <width>797</width>
+    <height>181</height>
+   </rect>
+  </property>
+  <property name="title">
+   <string>Свойства создаваемой мишени</string>
+  </property>
+  <property name="flat">
+   <bool>false</bool>
+  </property>
+  <property name="checkable">
+   <bool>false</bool>
+  </property>
+  <widget class="QSlider" name="Sl">
+  <property name="geometry">
+   <rect>
+    <x>328</x>
+    <y>156</y>
+    <width>73</width>
+    <height>21</height>
+   </rect>
+  </property>
+  <property name="orientation">
+   <enum>Qt::Horizontal</enum>
+  </property>
+  <property name="toolTip">
+   <string>Изменение сложности всех упражнений</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cizmtpl10">
+  <property name="geometry">
+   <rect>
+    <x>292</x>
+    <y>156</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>10</string>
+  </property>
+  <property name="toolTip">
+   <string>Увеличить время на 1,0 сек</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cizmtmi10">
+  <property name="geometry">
+   <rect>
+    <x>116</x>
+    <y>156</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>10</string>
+  </property>
+  <property name="toolTip">
+   <string>Уменьшить время на 1,0 сек</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cizmtmi5">
+  <property name="geometry">
+   <rect>
+    <x>145</x>
+    <y>156</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>-5</string>
+  </property>
+  <property name="toolTip">
+   <string>Уменьшить время на 0,5 сек</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cizmtpl5">
+  <property name="geometry">
+   <rect>
+    <x>263</x>
+    <y>156</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>+5</string>
+  </property>
+  <property name="toolTip">
+   <string>Увеличить время на 0,5 сек</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cappl">
+  <property name="geometry">
+   <rect>
+    <x>432</x>
+    <y>156</y>
+    <width>73</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Apply</string>
+  </property>
+  <property name="toolTip">
+   <string>Применить внесенные изменения</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cizmtmi">
+  <property name="geometry">
+   <rect>
+    <x>173</x>
+    <y>156</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>-1</string>
+  </property>
+  <property name="toolTip">
+   <string>Уменьшить время на 0,1 сек</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cizmtpl">
+  <property name="geometry">
+   <rect>
+    <x>235</x>
+    <y>156</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>+1</string>
+  </property>
+  <property name="toolTip">
+   <string>Увеличить время на 0,1 сек</string>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tizmt">
+  <property name="geometry">
+   <rect>
+    <x>202</x>
+    <y>156</y>
+    <width>29</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  <property name="toolTip">
+   <string>Время демонстрации мишени в 0,1 сек</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cizmrmi">
+  <property name="geometry">
+   <rect>
+    <x>20</x>
+    <y>156</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>-1</string>
+  </property>
+  <property name="toolTip">
+   <string>Уменьшить размер мишеней</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cizmrpl">
+  <property name="geometry">
+   <rect>
+    <x>80</x>
+    <y>156</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>+1</string>
+  </property>
+  <property name="toolTip">
+   <string>Увеличить размер мишеней</string>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tizmr">
+  <property name="geometry">
+   <rect>
+    <x>48</x>
+    <y>156</y>
+    <width>29</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  <property name="toolTip">
+   <string>Размер мишеней</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cend">
+  <property name="geometry">
+   <rect>
+    <x>752</x>
+    <y>112</y>
+    <width>33</width>
+    <height>22</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Exit</string>
+  </property>
+  <property name="toolTip">
+   <string>Завершить работу</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="CNew1">
+  <property name="geometry">
+   <rect>
+    <x>8</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Добавить круглую мишень</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cnew2">
+  <property name="geometry">
+   <rect>
+    <x>37</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Добавить многоугольную мишень</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cnew3">
+  <property name="geometry">
+   <rect>
+    <x>66</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Добавить мишень с картинкой</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cnew4">
+  <property name="geometry">
+   <rect>
+    <x>95</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Добавить мишень с фильмом</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cdel">
+  <property name="geometry">
+   <rect>
+    <x>716</x>
+    <y>112</y>
+    <width>33</width>
+    <height>22</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Del</string>
+  </property>
+  <property name="toolTip">
+   <string>Удаление последней мишени</string>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Picture1">
+  <property name="geometry">
+   <rect>
+    <x>392</x>
+    <y>36</y>
+    <width>177</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string>Наличие и тип табло результата для следующей мишени</string>
+  </property>
+  <widget class="QRadioButton" name="Ott">
+  <property name="geometry">
+   <rect>
+    <x>16</x>
+    <y>8</y>
+    <width>13</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Option1</string>
+  </property>
+  <property name="toolTip">
+   <string>Слева на экране</string>
+  </property>
+  </widget>
+  <widget class="QRadioButton" name="Ott">
+  <property name="geometry">
+   <rect>
+    <x>28</x>
+    <y>8</y>
+    <width>13</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Option1</string>
+  </property>
+  <property name="toolTip">
+   <string>Справа на экране</string>
+  </property>
+  </widget>
+  <widget class="QRadioButton" name="Ott">
+  <property name="geometry">
+   <rect>
+    <x>68</x>
+    <y>8</y>
+    <width>13</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Option1</string>
+  </property>
+  <property name="toolTip">
+   <string>Слева от мишени</string>
+  </property>
+  </widget>
+  <widget class="QRadioButton" name="Ott">
+  <property name="geometry">
+   <rect>
+    <x>80</x>
+    <y>8</y>
+    <width>13</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Option1</string>
+  </property>
+  <property name="toolTip">
+   <string>Справа от мишени</string>
+  </property>
+  </widget>
+  <widget class="QRadioButton" name="Ott">
+  <property name="geometry">
+   <rect>
+    <x>112</x>
+    <y>4</y>
+    <width>13</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Option1</string>
+  </property>
+  <property name="toolTip">
+   <string>Под мишенью</string>
+  </property>
+  </widget>
+  <widget class="QRadioButton" name="Ott">
+  <property name="geometry">
+   <rect>
+    <x>132</x>
+    <y>8</y>
+    <width>13</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Option1</string>
+  </property>
+  <property name="toolTip">
+   <string>Над мишенью</string>
+  </property>
+  </widget>
+  <widget class="QRadioButton" name="Ott">
+  <property name="geometry">
+   <rect>
+    <x>156</x>
+    <y>4</y>
+    <width>13</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Option1</string>
+  </property>
+  <property name="toolTip">
+   <string>Привязать к предыдущей таблице</string>
+  </property>
+  </widget>
+  </widget>
+  <widget class="QPushButton" name="Csnd">
+  <property name="geometry">
+   <rect>
+    <x>648</x>
+    <y>112</y>
+    <width>29</width>
+    <height>22</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Включение-выключение звука.</string>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tmas">
+  <property name="geometry">
+   <rect>
+    <x>252</x>
+    <y>80</y>
+    <width>21</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Pmas">
+  <property name="geometry">
+   <rect>
+    <x>272</x>
+    <y>80</y>
+    <width>184</width>
+    <height>20</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Pcol">
+  <property name="geometry">
+   <rect>
+    <x>412</x>
+    <y>112</y>
+    <width>230</width>
+    <height>25</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Ptime">
+  <property name="geometry">
+   <rect>
+    <x>40</x>
+    <y>80</y>
+    <width>202</width>
+    <height>20</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Ttime">
+  <property name="geometry">
+   <rect>
+    <x>8</x>
+    <y>80</y>
+    <width>29</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Pkolt">
+  <property name="geometry">
+   <rect>
+    <x>40</x>
+    <y>116</y>
+    <width>112</width>
+    <height>20</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tkolt">
+  <property name="geometry">
+   <rect>
+    <x>8</x>
+    <y>116</y>
+    <width>29</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cstart">
+  <property name="geometry">
+   <rect>
+    <x>680</x>
+    <y>112</y>
+    <width>33</width>
+    <height>22</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Go</string>
+  </property>
+  <property name="toolTip">
+   <string>Запуск упражнения</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpath4">
+  <property name="geometry">
+   <rect>
+    <x>214</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Случайный выбор начала и конца</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpath3">
+  <property name="geometry">
+   <rect>
+    <x>185</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>С отражением от стенок</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpath2">
+  <property name="geometry">
+   <rect>
+    <x>157</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Прыгающая мишень</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpath5">
+  <property name="geometry">
+   <rect>
+    <x>243</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Взлетающая мишень</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpop4">
+  <property name="geometry">
+   <rect>
+    <x>363</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Разбить мишень и остановить</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpop3">
+  <property name="geometry">
+   <rect>
+    <x>334</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Разбить мишень</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpop2">
+  <property name="geometry">
+   <rect>
+    <x>305</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Добавить пробоину и остановить</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpop1">
+  <property name="geometry">
+   <rect>
+    <x>276</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Добавить пробоину</string>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tkols">
+  <property name="geometry">
+   <rect>
+    <x>156</x>
+    <y>116</y>
+    <width>29</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Pkols">
+  <property name="geometry">
+   <rect>
+    <x>188</x>
+    <y>116</y>
+    <width>112</width>
+    <height>20</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Psped">
+  <property name="geometry">
+   <rect>
+    <x>484</x>
+    <y>80</y>
+    <width>184</width>
+    <height>20</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tsped">
+  <property name="geometry">
+   <rect>
+    <x>464</x>
+    <y>80</y>
+    <width>21</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QGraphicsView" name="Pfon">
+  <property name="geometry">
+   <rect>
+    <x>572</x>
+    <y>36</y>
+    <width>172</width>
+    <height>26</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cscr1">
+  <property name="geometry">
+   <rect>
+    <x>676</x>
+    <y>80</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Весь экран</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cscr2">
+  <property name="geometry">
+   <rect>
+    <x>704</x>
+    <y>80</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Половина экрана</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cscr3">
+  <property name="geometry">
+   <rect>
+    <x>732</x>
+    <y>80</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Треть экрана</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cscr4">
+  <property name="geometry">
+   <rect>
+    <x>760</x>
+    <y>80</y>
+    <width>25</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Произвольное</string>
+  </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="Tpaus">
+  <property name="geometry">
+   <rect>
+    <x>320</x>
+    <y>116</y>
+    <width>29</width>
+    <height>19</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpplus">
+  <property name="geometry">
+   <rect>
+    <x>348</x>
+    <y>116</y>
+    <width>17</width>
+    <height>17</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>></string>
+  </property>
+  <property name="toolTip">
+   <string>Увеличить</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpminus">
+  <property name="geometry">
+   <rect>
+    <x>304</x>
+    <y>116</y>
+    <width>17</width>
+    <height>17</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>&lt;</string>
+  </property>
+  <property name="toolTip">
+   <string>Уменьшить</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Crpau">
+  <property name="geometry">
+   <rect>
+    <x>364</x>
+    <y>116</y>
+    <width>17</width>
+    <height>17</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Случайное изменение паузы</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cpath1">
+  <property name="geometry">
+   <rect>
+    <x>128</x>
+    <y>36</y>
+    <width>25</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="toolTip">
+   <string>Неподвижная мишень</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cload">
+  <property name="geometry">
+   <rect>
+    <x>748</x>
+    <y>36</y>
+    <width>37</width>
+    <height>17</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Load</string>
+  </property>
+  <property name="toolTip">
+   <string>Загрузить упражнение</string>
+  </property>
+  </widget>
+  <widget class="QPushButton" name="Cedt">
+  <property name="geometry">
+   <rect>
+    <x>748</x>
+    <y>56</y>
+    <width>37</width>
+    <height>17</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Edit</string>
+  </property>
+  <property name="toolTip">
+   <string>Запустить редактор упражнений</string>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lab15">
+  <property name="geometry">
+   <rect>
+    <x>324</x>
+    <y>140</y>
+    <width>80</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>&lt; сложность &gt;</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label18">
+  <property name="geometry">
+   <rect>
+    <x>588</x>
+    <y>140</y>
+    <width>112</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Сообщения</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label17">
+  <property name="geometry">
+   <rect>
+    <x>396</x>
+    <y>140</y>
+    <width>144</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Применить изменения</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label16">
+  <property name="geometry">
+   <rect>
+    <x>164</x>
+    <y>140</y>
+    <width>112</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Изменение времени</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label14">
+  <property name="geometry">
+   <rect>
+    <x>8</x>
+    <y>140</y>
+    <width>112</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Изменение размера</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lt">
+  <property name="geometry">
+   <rect>
+    <x>512</x>
+    <y>156</y>
+    <width>277</width>
+    <height>17</height>
+   </rect>
+  </property>
+  <property name="font">
+     <font>
+      <family>MS Sans Serif</family>
+      <pointsize>8.25</pointsize>
+      <bold>true</bold>
+      <weight>75</weight>
+     </font>
+  </property>
+  <property name="text">
+   <string>Lt</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label1">
+  <property name="geometry">
+   <rect>
+    <x>12</x>
+    <y>20</y>
+    <width>105</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Тип мишени</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label2">
+  <property name="geometry">
+   <rect>
+    <x>428</x>
+    <y>20</y>
+    <width>129</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Табло результата</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label3">
+  <property name="geometry">
+   <rect>
+    <x>268</x>
+    <y>64</y>
+    <width>177</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Масштаб мишени</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lc1">
+  <property name="geometry">
+   <rect>
+    <x>388</x>
+    <y>120</y>
+    <width>17</width>
+    <height>16</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Lc2">
+  <property name="geometry">
+   <rect>
+    <x>392</x>
+    <y>108</y>
+    <width>9</width>
+    <height>13</height>
+   </rect>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label4">
+  <property name="geometry">
+   <rect>
+    <x>436</x>
+    <y>100</y>
+    <width>177</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Цвет мишени</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label5">
+  <property name="geometry">
+   <rect>
+    <x>44</x>
+    <y>64</y>
+    <width>177</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Время на выстрел</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label6">
+  <property name="geometry">
+   <rect>
+    <x>24</x>
+    <y>100</y>
+    <width>124</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Кол-во мишеней</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label7">
+  <property name="geometry">
+   <rect>
+    <x>132</x>
+    <y>20</y>
+    <width>124</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Тип траектории</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label8">
+  <property name="geometry">
+   <rect>
+    <x>280</x>
+    <y>20</y>
+    <width>105</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>При попадании</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label9">
+  <property name="geometry">
+   <rect>
+    <x>168</x>
+    <y>100</y>
+    <width>124</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Кол-во выстрелов</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label10">
+  <property name="geometry">
+   <rect>
+    <x>488</x>
+    <y>64</y>
+    <width>177</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Скорость мишени</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label11">
+  <property name="geometry">
+   <rect>
+    <x>604</x>
+    <y>20</y>
+    <width>113</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Фон экрана</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label12">
+  <property name="geometry">
+   <rect>
+    <x>664</x>
+    <y>64</y>
+    <width>81</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Поле мишени</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  <widget class="QLabel" name="Label13">
+  <property name="geometry">
+   <rect>
+    <x>316</x>
+    <y>100</y>
+    <width>52</width>
+    <height>13</height>
+   </rect>
+  </property>
+  <property name="text">
+   <string>Пауза</string>
+  </property>
+  <property name="alignment">
+   <set>Qt::AlignCenter</set>
+  </property>
+  </widget>
+  </widget>
+  </widget>
+ <resources/>
+ <connections/>
+</ui>
+
