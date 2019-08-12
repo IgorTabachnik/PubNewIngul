@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui svg
+QT       += core gui svg declarative
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,7 +28,8 @@ SOURCES += \
         mainwindow.cpp \
     target2.cpp \
     target_info.cpp \
-    tir.cpp
+    tir.cpp \
+    formgroup.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -36,11 +37,15 @@ HEADERS += \
     target_info.h \
     tir.h \
     target.h \
-    bullet_info.h
+    bullet_info.h \
+    formgroup.h
 
 FORMS += \
         mainwindow.ui \
-    tir.ui
+    tir.ui \
+    formgroup.ui
 
 RESOURCES += \
     images.qrc
+
+DISTFILES +=
