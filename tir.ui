@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="minimum">
-    <number>1000</number>
+    <number>100</number>
    </property>
    <property name="maximum">
     <number>5000</number>

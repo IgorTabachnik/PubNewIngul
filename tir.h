@@ -30,8 +30,13 @@ private:
     QList<int> focused_targets;
     TargetInfo target;
 
+    bool event(QEvent*);
+    void CreateTarget();
+
 private slots:
     void ChangeColor();
+    void GeneratePoints(Target2*);
+    void Deleter(Target2*);
 
 };
 

@@ -5,11 +5,22 @@
 
 Target2::Target2(QWidget *parent) : QWidget(parent)
 {
-    setAttribute(Qt::WA_Hover);
+    //setAttribute(Qt::WA_Hover);
     anim = new QPropertyAnimation(this,"geometry");
     anim->setDuration(1000);
     anim->setEasingCurve(QEasingCurve::Linear);
     curr_speed = 1000;
+    this->hide();
+}
+
+void Target2::SetSize(uint8_t percent)
+{
+
+}
+
+void Target2::SetAnimationType(ANIM_TYPE anim)
+{
+    this->anim_type = anim;
 }
 
 void Target2::LoadTexture(TargetImage *target)
@@ -28,12 +39,18 @@ void Target2::SetMovements(QList<QPointF> move)
     {
         movements.append(QRectF(point - QPointF(geometry().width()/2,geometry().height()/2),geometry().size())); //set coordinates to 0 point
     }
-    curr_animation = 0;
     connect(anim,&QPropertyAnimation::finished,this,&Target2::NextAnimation);
-    anim->setStartValue(geometry());
-    anim->setEndValue(movements[0]);
+
+}
+
+void Target2::StartAnimation()
+{
+    anim->setStartValue(movements[0]);
+    anim->setEndValue(movements[1]);
+    curr_animation = 1;
     anim->setDuration(QLineF(geometry().topLeft(),movements[0].topLeft()).length()*curr_speed/PIXELS_PER_SPEED);
     anim->start();
+    this->show();
 }
 
 void Target2::SetSpeed(int speed)
@@ -47,19 +64,25 @@ void Target2::NextAnimation()
     anim->setStartValue(movements[curr_animation]);
     anim->setDuration(QLineF(movements[curr_animation].topLeft(),movements[(curr_animation+1)%movements.length()].topLeft()).length()*curr_speed/PIXELS_PER_SPEED);
     curr_animation++;
-    curr_animation%=movements.length();
-    anim->setEndValue(movements[curr_animation]);
-    anim->start();
+    if(curr_animation == movements.length())
+    {
+        this->hide();
+        anim->stop();
+        emit AnimationEnd(this);
+    }
+    else
+    {
+        anim->setEndValue(movements[curr_animation]);
+        anim->start();
+    }
 }
+
 
 void Target2::paintEvent(QPaintEvent *event)
 {
 
     event->accept();
     QPainter painter(this);
-    //QSvgRenderer rend(QString(":/media/Circles.svg"));
-    //rend.render(&painter);
-    //painter.drawPixmap(0,0,target->texture);
     painter.drawPixmap(0, 0, this->width(), this->height(), target->texture);
 
     painter.setPen(Qt::NoPen);
@@ -80,12 +103,16 @@ bool Target2::event(QEvent* event)
         {
             event->accept();
             QMouseEvent *evt = static_cast<QMouseEvent*>(event);
-            for(int i = 0;i<bullets.length();++i)
+            if(evt->button() == Qt::MouseButton::LeftButton)
             {
-                if(bullets[i] == evt->pos()) return true;
+                for(int i = 0;i<bullets.length();++i)
+                {
+                    if(bullets[i] == evt->pos()) return true;
+                }
+                bullets.append(evt->pos());
+                repaint();
             }
-            bullets.append(evt->pos());
-            repaint();
+            else if(evt->button() == Qt::MouseButton::RightButton) emit DeleteHandler(this);
         }
         return true;
 

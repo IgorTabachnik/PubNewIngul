@@ -15,13 +15,16 @@ class Target2 : public QWidget
 public:
 
     explicit Target2(QWidget *parent = nullptr);
-    void LoadTexture(TargetImage *target);
+    void LoadTexture(TargetImage*);
     void SetMovements(QList<QPointF>);
+    void StartAnimation();
+    void SetAnimationType(ANIM_TYPE);
+    ANIM_TYPE anim_type;
 
 
 private:
     bool event(QEvent* event);
-    void paintEvent(QPaintEvent* event);
+    void paintEvent(QPaintEvent*);
     TargetImage *target;
     QList<QPointF> bullets;
     QList<QRectF> movements;
@@ -31,10 +34,13 @@ private:
     QPixmap pixmap;
 
 signals:
+    void AnimationEnd(Target2*);
+    void DeleteHandler(Target2*);
 
 public slots:
     void NextAnimation();
-    void SetSpeed(int speed);
+    void SetSize(uint8_t);
+    void SetSpeed(int);
 };
 
 #endif // TARGET2_H

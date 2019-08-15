@@ -11,6 +11,14 @@ struct TargetImage
     QPixmap color_mask;
 };
 
+enum ANIM_TYPE
+{
+    ANIM_SQUARE,
+    ANIM_ZOOM,
+    ANIM_PARABOLA,
+    ANIM_STATIC
+};
+
 class TargetInfo
 {
 public:
