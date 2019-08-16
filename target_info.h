@@ -8,7 +8,7 @@ struct TargetImage
 {
     QPixmap texture;
     QBitmap mask;
-    QPixmap color_mask;
+    QBitmap color_mask;
 };
 
 enum ANIM_TYPE

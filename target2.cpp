@@ -80,6 +80,22 @@ void Target2::NextAnimation()
     }
 }
 
+void Target2::TracePosition()
+{
+    QLineF line(QPointF(this->width()/2,this->height()/2),bullets.last());
+    QList<QColor> pixels;
+    QImage scaled = target->color_mask.toImage().scaled(this->width(),this->height());
+    uint8_t form = 0;
+    for(qreal i = 0;i<1;i+=0.001)
+    {
+        pixels.append(scaled.pixelColor(line.pointAt(i).toPoint()));
+    }
+    for(int i = 0;i<pixels.length()-1;++i)
+    {
+        if(pixels[i]!=pixels[i+1]) form++;
+    }
+    emit ZoneHandler(form);
+}
 
 void Target2::paintEvent(QPaintEvent *event)
 {
@@ -113,6 +129,7 @@ bool Target2::event(QEvent* event)
                     if(bullets[i] == evt->pos()) return true;
                 }
                 bullets.append(evt->pos());
+                TracePosition();
                 repaint();
             }
             else if(evt->button() == Qt::MouseButton::RightButton) emit DeleteHandler(this);

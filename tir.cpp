@@ -48,7 +48,7 @@ void Tir::GeneratePoints(Target2* tgt)
     break;
 
     case ANIM_PARABOLA:
-        x_zero = rand()%(this->geometry().width()-20) + 20;
+        x_zero = rand.generate()%(this->geometry().width()-20) + 20;
         y_zero = this->geometry().height()/2 + rand.generate()%80;
         //function: y = -(x-x_zero)^2 + y_zero;
         for(qreal i = 0;i<150;i+=1)
@@ -63,6 +63,10 @@ void Tir::GeneratePoints(Target2* tgt)
         tgt->SetMovements(new_points);
         tgt->StartAnimation();
     break;
+
+    case ANIM_STATIC:
+        tgt->setGeometry(rand.generate()%this->geometry().width(),rand.generate()%this->geometry().height(),tgt->width(),tgt->height());
+        tgt->show();
 
     default:
         break;
@@ -100,14 +104,19 @@ void Tir::CreateTarget()
 {
     targets2.append(new Target2(this));
     targets2.last()->LoadTexture(&target.svg_test);
-    targets2.last()->SetAnimationType(ANIM_TYPE::ANIM_PARABOLA);
+    targets2.last()->SetAnimationType(ANIM_TYPE::ANIM_STATIC);
     targets2.last()->SetSize(100);
     //points fo animation
     GeneratePoints(targets2.last());
     connect(ui->speed,static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),targets2.last(),&Target2::SetSpeed);
     connect(targets2.last(),&Target2::DeleteHandler,this,&Tir::Deleter);
     connect(targets2.last(),&Target2::AnimationEnd,this,&Tir::GeneratePoints);
+    connect(targets2.last(),&Target2::ZoneHandler,this,&Tir::ZoneShow);
+}
 
+void Tir::ZoneShow(uint8_t zone)
+{
+    ui->zone_label->setText("Zone: " + QVariant(zone).toString());
 }
 
 void Tir::ChangeColor()

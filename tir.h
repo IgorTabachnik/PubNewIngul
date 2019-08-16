@@ -37,6 +37,7 @@ private slots:
     void ChangeColor();
     void GeneratePoints(Target2*);
     void Deleter(Target2*);
+    void ZoneShow(uint8_t);
 
 };
 

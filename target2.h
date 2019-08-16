@@ -25,6 +25,7 @@ public:
 private:
     bool event(QEvent* event);
     void paintEvent(QPaintEvent*);
+    void TracePosition();
     TargetImage *target;
     QList<QPointF> bullets;
     QList<QRectF> movements;
@@ -37,6 +38,7 @@ private:
 signals:
     void AnimationEnd(Target2*);
     void DeleteHandler(Target2*);
+    void ZoneHandler(uint8_t); //Зона попадания
 
 public slots:
     void NextAnimation();

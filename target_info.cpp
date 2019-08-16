@@ -35,7 +35,7 @@ void TargetInfo::LoadTargets()
     body.color_mask = body.texture.createMaskFromColor(current_color,Qt::MaskOutColor);
 
     QSvgRenderer rend(QString(":/media/Circles.svg"));
-    QImage img(rend.viewBox().width(),rend.viewBox().height(),QImage::Format::Format_ARGB32);
+    QImage img(rend.viewBox().width()*3,rend.viewBox().height()*3,QImage::Format::Format_ARGB32);
     img.fill(0x00);
     QPainter painter(&img);
     rend.render(&painter);
