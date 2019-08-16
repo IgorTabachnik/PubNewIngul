@@ -99,10 +99,9 @@ bool Tir::event(QEvent* event)
 void Tir::CreateTarget()
 {
     targets2.append(new Target2(this));
-    targets2.last()->setGeometry(300,300,150,150);
     targets2.last()->LoadTexture(&target.svg_test);
     targets2.last()->SetAnimationType(ANIM_TYPE::ANIM_PARABOLA);
-    targets2.last()->SetSize(20);
+    targets2.last()->SetSize(100);
     //points fo animation
     GeneratePoints(targets2.last());
     connect(ui->speed,static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),targets2.last(),&Target2::SetSpeed);

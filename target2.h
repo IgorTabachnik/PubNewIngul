@@ -32,6 +32,7 @@ private:
     uint16_t curr_animation;
     uint16_t curr_speed;
     QPixmap pixmap;
+    uint8_t percent_size;
 
 signals:
     void AnimationEnd(Target2*);

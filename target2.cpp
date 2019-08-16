@@ -10,12 +10,14 @@ Target2::Target2(QWidget *parent) : QWidget(parent)
     anim->setDuration(1000);
     anim->setEasingCurve(QEasingCurve::Linear);
     curr_speed = 1000;
+    percent_size = 20;
     this->hide();
 }
 
 void Target2::SetSize(uint8_t percent)
 {
-
+    percent_size = percent;
+    this->setGeometry(this->geometry().x(),this->geometry().y(),this->geometry().width()*percent/100,this->geometry().height()*percent/100);
 }
 
 void Target2::SetAnimationType(ANIM_TYPE anim)
@@ -26,6 +28,7 @@ void Target2::SetAnimationType(ANIM_TYPE anim)
 void Target2::LoadTexture(TargetImage *target)
 {
     this->target = target;
+    this->setGeometry(this->geometry().x(),this->geometry().y(),target->texture.width()*percent_size/100,target->texture.height()*percent_size/100);
     setMask(target->mask.scaled(width(),height()));
 
 }
