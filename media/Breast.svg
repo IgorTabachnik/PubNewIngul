@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Слой_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 405 405"
+   xml:space="preserve"
+   sodipodi:docname="Breast.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   width="405"
+   height="405"><metadata
+   id="metadata21"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs19" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1001"
+   id="namedview17"
+   showgrid="false"
+   inkscape:zoom="1.2361274"
+   inkscape:cx="166.72506"
+   inkscape:cy="279.8615"
+   inkscape:window-x="-9"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Слой_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:#326007;}
+	.st1{fill:#326007;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<polygon
+   class="st0"
+   points="339.5,460.53 339.5,739.11 739,739.11 739,458.55 618.15,458.55 618.15,338.19 460.36,338.98 460.36,460.53 "
+   id="polygon4"
+   style="fill:#326007;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:none"
+   transform="translate(-337,-336.5)" />
+<path
+   class="st1"
+   d="M 385.84,122.5 H 281.5 V 18.72 C 257.28,8.28 230.56,2.5 202.5,2.5 c -28.06,0 -54.78,5.78 -79,16.22 V 124.5 H 18.28 C 8.12,148.46 2.5,174.82 2.5,202.5 c 0,110.46 89.54,200 200,200 110.46,0 200,-89.54 200,-200 0,-28.44 -5.94,-55.5 -16.66,-80 z"
+   id="path6"
+   style="fill:#326007;stroke:#000000;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:none"
+   inkscape:connector-curvature="0" />
+<path
+   class="st1"
+   d="M 341.08,122.5 H 281.5 V 63.34 C 258.2,50.08 231.24,42.5 202.5,42.5 c -28.74,0 -55.7,7.58 -79,20.84 V 124.5 H 62.78 c -12.92,23.08 -20.28,49.68 -20.28,78 0,88.36 71.64,160 160,160 88.36,0 160,-71.64 160,-160 0,-29.14 -7.8,-56.46 -21.42,-80 z"
+   id="path8"
+   style="fill:#326007;stroke:#000000;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:none"
+   inkscape:connector-curvature="0" />
+<path
+   class="st1"
+   d="m 322.5,202.5 c 0,66.28 -53.72,120 -120,120 -66.28,0 -120,-53.72 -120,-120 0,-29.78 10.86,-57.02 28.8,-78 h 12.2 v -12.34 c 21.1,-18.46 48.74,-29.66 79,-29.66 30.26,0 57.9,11.2 79,29.66 v 10.34 h 10.46 c 18.98,21.24 30.54,49.26 30.54,80 z"
+   id="path10"
+   style="fill:#326007;stroke:#000000;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:none"
+   inkscape:connector-curvature="0" />
+<circle
+   class="st1"
+   cx="202.5"
+   cy="202.5"
+   r="80"
+   id="circle12"
+   style="fill:#326007;stroke:#000000;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:none" />
+<circle
+   class="st1"
+   cx="202.5"
+   cy="203"
+   r="40"
+   id="circle14"
+   style="fill:#326007;stroke:#000000;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:none" />
+</svg>

@@ -103,7 +103,7 @@ bool Tir::event(QEvent* event)
 void Tir::CreateTarget()
 {
     targets2.append(new Target2(this));
-    targets2.last()->LoadTexture(&target.svg_test);
+    targets2.last()->LoadTexture(&target.torso);
     targets2.last()->SetAnimationType(ANIM_TYPE::ANIM_STATIC);
     targets2.last()->SetSize(100);
     //points fo animation

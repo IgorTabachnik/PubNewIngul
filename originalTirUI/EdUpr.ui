@@ -319,7 +319,7 @@ QGroupBox::title {
      </font>
   </property>
   <property name="text">
-   <string><</string>
+   <string>left</string>
   </property>
   <property name="toolTip">
    <string>к предыдущей точке</string>
@@ -618,7 +618,7 @@ QGroupBox::title {
      </font>
   </property>
   <property name="text">
-   <string><</string>
+   <string>left</string>
   </property>
   <property name="toolTip">
    <string>к предыдущему отрезку</string>
@@ -911,7 +911,7 @@ QGroupBox::title {
      </font>
   </property>
   <property name="text">
-   <string><</string>
+   <string>left</string>
   </property>
   <property name="toolTip">
    <string>к предыдущей мишени</string>

@@ -84,8 +84,8 @@ void Target2::TracePosition()
 {
     QLineF line(QPointF(this->width()/2,this->height()/2),bullets.last());
     QList<QColor> pixels;
-    QImage scaled = target->color_mask.toImage().scaled(this->width(),this->height());
     uint8_t form = 0;
+    QImage scaled = target->zone_mask.scaled(this->width(),this->height()).toImage();
     for(qreal i = 0;i<1;i+=0.001)
     {
         pixels.append(scaled.pixelColor(line.pointAt(i).toPoint()));
@@ -103,6 +103,8 @@ void Target2::paintEvent(QPaintEvent *event)
     event->accept();
     QPainter painter(this);
     painter.drawPixmap(0, 0, this->width(), this->height(), target->texture);
+
+    painter.drawEllipse(this->width()/2-2,this->height()/2-2,4,4);
 
     painter.setPen(Qt::NoPen);
     painter.setBrush(QBrush(Qt::red, Qt::SolidPattern));
@@ -124,10 +126,10 @@ bool Target2::event(QEvent* event)
             QMouseEvent *evt = static_cast<QMouseEvent*>(event);
             if(evt->button() == Qt::MouseButton::LeftButton)
             {
-                for(int i = 0;i<bullets.length();++i)
+                /*for(int i = 0;i<bullets.length();++i)
                 {
                     if(bullets[i] == evt->pos()) return true;
-                }
+                }*/
                 bullets.append(evt->pos());
                 TracePosition();
                 repaint();

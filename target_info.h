@@ -9,6 +9,7 @@ struct TargetImage
     QPixmap texture;
     QBitmap mask;
     QBitmap color_mask;
+    QBitmap zone_mask;
 };
 
 enum ANIM_TYPE
@@ -24,11 +25,11 @@ class TargetInfo
 public:
     TargetInfo();
     void ChangeColor(QColor color);
-    TargetImage body;
+    TargetImage MKPS;
     TargetImage circle;
     TargetImage torso;
     TargetImage chest;
-    TargetImage svg_test;
+    TargetImage polygon;
     QColor current_color;
     QList<TargetImage*> targets;
 

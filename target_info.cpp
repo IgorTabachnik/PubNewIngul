@@ -9,40 +9,61 @@ TargetInfo::TargetInfo()
     targets.append(&circle);
     targets.append(&chest);
     targets.append(&torso);
-    targets.append(&body);
-    targets.append(&svg_test);
+    targets.append(&MKPS);
+    targets.append(&polygon);
 }
 
 void TargetInfo::LoadTargets()
 {
-    QPixmap main_img(":/media/Target_green.png");
-    current_color = QImage(":/media/Target_green.png").pixel(110+415/2,90+415/2);
-
-    circle.texture = main_img.copy(QRect(110,90,415,415));
-    circle.mask = circle.texture.createMaskFromColor(QColor(0,0,0,0));
-    circle.color_mask = circle.texture.createMaskFromColor(current_color,Qt::MaskOutColor);
-
-    chest.texture = main_img.copy(QRect(100,690,425,415));
-    chest.mask = chest.texture.createMaskFromColor(QColor(0,0,0,0));
-    chest.color_mask = chest.texture.createMaskFromColor(current_color,Qt::MaskOutColor);
-
-    torso.texture = main_img.copy(QRect(878,106,326,985));
-    torso.mask = torso.texture.createMaskFromColor(QColor(0,0,0,0));
-    torso.color_mask = torso.texture.createMaskFromColor(current_color,Qt::MaskOutColor);
-
-    body.texture = main_img.copy(QRect(1470,142,383,1383));
-    body.mask = body.texture.createMaskFromColor(QColor(0,0,0,0));
-    body.color_mask = body.texture.createMaskFromColor(current_color,Qt::MaskOutColor);
-
     QSvgRenderer rend(QString(":/media/Circles.svg"));
-    QImage img(rend.viewBox().width()*3,rend.viewBox().height()*3,QImage::Format::Format_ARGB32);
-    img.fill(0x00);
-    QPainter painter(&img);
-    rend.render(&painter);
+    QImage *img = new QImage(rend.viewBox().width()*2,rend.viewBox().height()*2,QImage::Format::Format_ARGB32);
+    img->fill(0x00);
+    QPainter *painter = new QPainter(img);
+    rend.render(painter);
+    circle.texture = QPixmap::fromImage(*img);
+    circle.mask = circle.texture.createMaskFromColor(QColor(0,0,0,0));
+    circle.color_mask = circle.texture.createMaskFromColor(img->pixel(img->width()/2,img->height()/2),Qt::MaskOutColor);
+    circle.zone_mask = circle.texture.createMaskFromColor(QColor(0,0,0,255),Qt::MaskMode::MaskOutColor); //цвет окружности (чёрный)
 
-    svg_test.texture = QPixmap::fromImage(img);
-    svg_test.mask = svg_test.texture.createMaskFromColor(QColor(0,0,0,0));
-    svg_test.color_mask = svg_test.texture.createMaskFromColor(img.pixel(img.width()/2,img.height()/2),Qt::MaskOutColor);
+    rend.load(QString(":/media/FullSize.svg"));
+    img = new QImage(rend.viewBox().width()*2, rend.viewBox().height()*2,QImage::Format::Format_ARGB32);
+    img->fill(0x00);
+    painter = new QPainter(img);
+    rend.render(painter);
+    torso.texture = QPixmap::fromImage(*img);
+    torso.mask = torso.texture.createMaskFromColor(QColor(0,0,0,0));
+    torso.color_mask = torso.texture.createMaskFromColor(img->pixel(img->width()/2,img->height()/2),Qt::MaskOutColor);
+    torso.zone_mask = torso.texture.createMaskFromColor(QColor(0,0,0,255),Qt::MaskMode::MaskOutColor); //цвет окружности (чёрный)
+
+    rend.load(QString(":/media/Star.svg"));
+    img = new QImage(rend.viewBox().width()*2, rend.viewBox().height()*2,QImage::Format::Format_ARGB32);
+    img->fill(0x00);
+    painter = new QPainter(img);
+    rend.render(painter);
+    polygon.texture = QPixmap::fromImage(*img);
+    polygon.mask = polygon.texture.createMaskFromColor(QColor(0,0,0,0));
+    polygon.color_mask = polygon.texture.createMaskFromColor(img->pixel(img->width()/2,img->height()/2),Qt::MaskOutColor);
+    polygon.zone_mask = polygon.texture.createMaskFromColor(QColor(0,0,0,255),Qt::MaskMode::MaskOutColor);
+
+    rend.load(QString(":/media/MKPS.svg"));
+    img = new QImage(rend.viewBox().width()*2, rend.viewBox().height()*2,QImage::Format::Format_ARGB32);
+    img->fill(0x00);
+    painter = new QPainter(img);
+    rend.render(painter);
+    MKPS.texture = QPixmap::fromImage(*img);
+    MKPS.mask = MKPS.texture.createMaskFromColor(QColor(0,0,0,0));
+    MKPS.color_mask = MKPS.texture.createMaskFromColor(img->pixel(img->width()/2,img->height()/2),Qt::MaskOutColor);
+    MKPS.zone_mask = MKPS.texture.createMaskFromColor(QColor(0,0,0,255),Qt::MaskMode::MaskOutColor);
+
+    rend.load(QString(":/media/Breast.svg"));
+    img = new QImage(rend.viewBox().width()*2, rend.viewBox().height()*2,QImage::Format::Format_ARGB32);
+    img->fill(0x00);
+    painter = new QPainter(img);
+    rend.render(painter);
+    chest.texture = QPixmap::fromImage(*img);
+    chest.mask = chest.texture.createMaskFromColor(QColor(0,0,0,0));
+    chest.color_mask = chest.texture.createMaskFromColor(img->pixel(img->width()/2,img->height()/2),Qt::MaskOutColor);
+    chest.zone_mask = chest.texture.createMaskFromColor(QColor(0,0,0,255),Qt::MaskMode::MaskOutColor);
 
 }
 

@@ -10,6 +10,12 @@
         <file>media/Target_pink.png</file>
         <file>media/unchecked.png</file>
         <file>media/vodopad.jpg</file>
+        <file>media/Breast.svg</file>
         <file>media/Circles.svg</file>
+        <file>media/MKPS.svg</file>
+        <file>media/Star.svg</file>
+        <file>media/FullSize.svg</file>
+        <file>media/FullSize3.svg</file>
+        <file>media/FullSize4.svg</file>
     </qresource>
 </RCC>
