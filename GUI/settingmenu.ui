@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingMenu</class>
+ <widget class="QWidget" name="SettingMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1175</width>
+    <height>293</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>1141</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1141</width>
+     <height>411</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+color:black;
+background-image: url(:/new/prefix1/menu/sky.jpg);
+}</string>
+   </property>
+   <property name="title">
+    <string>Properties of Target</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>132</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="Types_lb">
+       <property name="styleSheet">
+        <string notr="true">color:black;</string>
+       </property>
+       <property name="text">
+        <string>Type of Target</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QRadioButton" name="type1">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#type1::indicator{
+
+image:url(:/new/prefix1/menu/тип1.png);
+}
+QRadioButton#type1::indicator:checked{
+border: 2px solid red;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="type2">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#type2::indicator{
+
+image:url(:/new/prefix1/menu/Слой 2.png);
+}
+QRadioButton#type2::indicator:checked{
+border: 2px solid red;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="type3">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#type3::indicator{
+
+image:url(:/new/prefix1/menu/Слой 3.png);
+}
+QRadioButton#type3::indicator:checked{
+border: 2px solid red;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="type4">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#type4::indicator{
+
+image:url(:/new/prefix1/menu/Слой 4.png);
+}
+QRadioButton#type4::indicator:checked{
+border: 2px solid red;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>30</y>
+      <width>180</width>
+      <height>52</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="traectory_lb">
+       <property name="styleSheet">
+        <string notr="true">color:black;</string>
+       </property>
+       <property name="text">
+        <string>Type of Trajectory</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSplitter" name="splitter_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QWidget" name="layoutWidget">
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QRadioButton" name="tr1">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#tr1::indicator{
+
+image:url(:/new/prefix1/menu/Слой 5.png);
+}
+QRadioButton#type1::indicator:checked{
+border: 2px solid red;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="tr2">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#tr2::indicator{
+
+image:url(:/new/prefix1/menu/Слой 6.png);
+}
+QRadioButton#type1::indicator:checked{
+border: 2px solid red;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="tr3">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#tr3::indicator{
+
+image:url(:/new/prefix1/menu/тип3.png);
+}
+QRadioButton#tr3::indicator:checked{
+border: 2px solid red;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="tr4">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#tr4::indicator{
+
+image:url(:/new/prefix1/menu/Слой 8.png);
+}
+QRadioButton#tr4::indicator:checked{
+border: 2px solid red;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="tr5">
+           <property name="styleSheet">
+            <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#tr5::indicator{
+
+image:url(:/new/prefix1/menu/Слой 9.png);
+}
+QRadioButton#tr5::indicator:checked{
+border: 2px solid red;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>30</y>
+      <width>134</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">color:black;</string>
+       </property>
+       <property name="text">
+        <string>On hit</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSplitter" name="splitter_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QRadioButton" name="hit1">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#hit1::indicator{
+
+image:url(:/new/prefix1/menu/Слой 10.png);
+}
+QRadioButton#hit1::indicator:checked{
+border: 2px solid red;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="hit2">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#hit2::indicator{
+
+image:url(:/new/prefix1/menu/Слой 11.png);
+}
+QRadioButton#hit2::indicator:checked{
+border: 2px solid red;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="hit3">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#hit3::indicator{
+
+image:url(:/new/prefix1/menu/тип2.png);
+}
+QRadioButton#hit3::indicator:checked{
+border: 2px solid red;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="hit4">
+        <property name="styleSheet">
+         <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#hit4::indicator{
+
+image:url(:/new/prefix1/menu/Слой 13.png);
+}
+QRadioButton#hit4::indicator:checked{
+border: 2px solid red;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QSplitter" name="splitter_8">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>150</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_7">
+     <property name="styleSheet">
+      <string notr="true">color:black;</string>
+     </property>
+     <property name="text">
+      <string>Pause</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+        </property>
+        <property name="text">
+         <string>&lt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="pause_edit">
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(211, 215, 207);</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+        </property>
+        <property name="text">
+         <string>&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>220</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_8">
+     <item>
+      <widget class="QLabel" name="label_11">
+       <property name="styleSheet">
+        <string notr="true">color:black;</string>
+       </property>
+       <property name="text">
+        <string>Difficult</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider">
+       <property name="styleSheet">
+        <string notr="true">background-color:rgb(211, 215, 207);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_14">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>230</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(211, 215, 207);
+color:black;
+}</string>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="splitter_4">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>170</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QRadioButton" name="volume">
+     <property name="styleSheet">
+      <string notr="true">QRadioButton{
+spacing:1px;
+}
+QRadioButton#volume::indicator{
+
+image:url(:/new/prefix1/menu/volume.png);
+}
+QRadioButton#volume::indicator:checked{
+border: 2px solid red;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+     </property>
+     <property name="text">
+      <string>Go</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_12">
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+     </property>
+     <property name="text">
+      <string>Del</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_13">
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(204, 0, 0);
+color:black;</string>
+     </property>
+     <property name="text">
+      <string>Exit</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:black;</string>
+     </property>
+     <property name="text">
+      <string>Time for Shoot</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLineEdit" name="time_edit">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p10">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>10</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p15">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>15</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p20">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>20</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p25">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>25</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p30">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>30</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p40">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>40</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p50">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>50</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p75">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>75</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p100">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>100</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p200">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>200</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="p300">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>300</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_9">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>90</y>
+      <width>281</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_3">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:black;</string>
+     </property>
+     <property name="text">
+      <string>Scale of Target</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_7">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLineEdit" name="scale_edit">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale1">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale2">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale3">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale4">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale5">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale6">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale7">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale8">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale9">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scale10">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_11">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>90</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="styleSheet">
+      <string notr="true">color:black;</string>
+     </property>
+     <property name="text">
+      <string>Velocity of Target</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_10">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLineEdit" name="velocity_edit">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity1">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity2">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity3">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity4">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity5">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity6">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity7">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity8">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity9">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="velocity10">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_15">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>220</y>
+      <width>131</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_9">
+     <property name="styleSheet">
+      <string notr="true">color:black;</string>
+     </property>
+     <property name="text">
+      <string>Change size</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_14">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>-1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>+1</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_17">
+    <property name="geometry">
+     <rect>
+      <x>241</x>
+      <y>221</y>
+      <width>261</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_10">
+     <property name="styleSheet">
+      <string notr="true">color:black;</string>
+     </property>
+     <property name="text">
+      <string>Time change</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_16">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>-10</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>-5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>-1</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>+1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>+5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);
+color:black;</string>
+      </property>
+      <property name="text">
+       <string>+10</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_13">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_5">
+     <property name="styleSheet">
+      <string notr="true">color:black;</string>
+     </property>
+     <property name="text">
+      <string>Count of Target</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_12">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLineEdit" name="count_edit">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="count6">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="count8">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="count10">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="count30">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>30</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="count100">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>100</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_19">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>150</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="styleSheet">
+      <string notr="true">color:black;</string>
+     </property>
+     <property name="text">
+      <string>Count of shoots</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSplitter" name="splitter_18">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLineEdit" name="countshoots_edit">
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(211, 215, 207);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cshoots6">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cshoots8">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cshoots10">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cshoots20">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>20</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cshoots30">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>30</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cshoots100">
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgb(136, 138, 133);
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>100</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>723</x>
+      <y>150</y>
+      <width>103</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:black;</string>
+    </property>
+    <property name="text">
+     <string>Color of Target</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>170</y>
+      <width>331</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(238, 238, 236);
+height:25px;
+</string>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QRadioButton" name="colorblack_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorblack_rb::indicator{
+
+background-color: #000000;
+}
+QRadioButton#colorblack_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorblue_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorblue_rb::indicator{
+
+background-color: #050079;
+}
+QRadioButton#colorblue_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorgreen_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorgreen_rb::indicator{
+
+background-color: #067c01;
+}
+QRadioButton#colorgreen_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorsea_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorsea_rb::indicator{
+
+background-color: #0b7b7d;
+}
+QRadioButton#colorsea_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorred_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorred_rb::indicator{
+
+background-color: #7f0105;
+}
+QRadioButton#colorred_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorpurple_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorpurple_rb::indicator{
+
+background-color: #830079;
+}
+QRadioButton#colorpurple_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorhacky_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorhacky_rb::indicator{
+
+background-color: #0b7b7d;
+}
+QRadioButton#colorhacky_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorgrey_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorgrey_rb::indicator{
+
+background-color: #bcc1bd;
+}
+QRadioButton#colorgrey_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colordgrey_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colordgrey_rb::indicator{
+
+background-color: #807e82;
+}
+QRadioButton#colordgrey_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colordblue_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colordblue_rb::indicator{
+
+background-color: #0700fc;
+}
+QRadioButton#colordblue_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorlgreen_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorlgreen_rb::indicator{
+
+background-color: #08fa06;
+}
+QRadioButton#colorlgrey_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorlsea_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorlsea_rb::indicator{
+
+background-color: #05fef8;
+}
+QRadioButton#colorlsea_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colorred_rb_2">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colorred_rb_2::indicator{
+
+background-color: #fa0002;
+}
+QRadioButton#colorred_rb_2::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="colordpurple_rb">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+spacing:5px;
+}
+QRadioButton#colordpurple_rb::indicator{
+
+background-color: #ff01f5;
+}
+QRadioButton#colordpurple_rb::indicator:checked{
+border: 2px solid red;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

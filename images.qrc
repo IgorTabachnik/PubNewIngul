@@ -15,7 +15,7 @@
         <file>media/MKPS.svg</file>
         <file>media/Star.svg</file>
         <file>media/FullSize.svg</file>
+        <file>media/FullSize2.svg</file>
         <file>media/FullSize3.svg</file>
-        <file>media/FullSize4.svg</file>
     </qresource>
 </RCC>

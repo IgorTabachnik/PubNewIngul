@@ -24,6 +24,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    GUI/settingmenu.cpp \
         main.cpp \
         mainwindow.cpp \
     target2.cpp \
@@ -32,6 +33,7 @@ SOURCES += \
     formgroup.cpp
 
 HEADERS += \
+    GUI/settingmenu.h \
         mainwindow.h \
     target2.h \
     target_info.h \
@@ -41,6 +43,7 @@ HEADERS += \
     formgroup.h
 
 FORMS += \
+    GUI/settingmenu.ui \
         mainwindow.ui \
     tir.ui \
     formgroup.ui \

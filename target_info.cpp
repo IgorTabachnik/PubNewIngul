@@ -25,7 +25,7 @@ void TargetInfo::LoadTargets()
     circle.color_mask = circle.texture.createMaskFromColor(img->pixel(img->width()/2,img->height()/2),Qt::MaskOutColor);
     circle.zone_mask = circle.texture.createMaskFromColor(QColor(0,0,0,255),Qt::MaskMode::MaskOutColor); //цвет окружности (чёрный)
 
-    rend.load(QString(":/media/FullSize.svg"));
+    rend.load(QString(":/media/FullSize3.svg"));
     img = new QImage(rend.viewBox().width()*2, rend.viewBox().height()*2,QImage::Format::Format_ARGB32);
     img->fill(0x00);
     painter = new QPainter(img);

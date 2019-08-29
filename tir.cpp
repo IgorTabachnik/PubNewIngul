@@ -23,6 +23,8 @@ Tir::Tir(int updateInterval, QWidget *parent) :
     connect(ui->green_slider,&QSlider::valueChanged,this,&Tir::ChangeColor);
     connect(ui->blue_slider,&QSlider::valueChanged,this,&Tir::ChangeColor);
 
+    menu = new SettingMenu();
+    menu->show();
 }
 
 Tir::~Tir()

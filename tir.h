@@ -10,6 +10,7 @@
 #include "target2.h"
 #include "bullet_info.h"
 #include "target_info.h"
+#include "GUI/settingmenu.h"
 
 namespace Ui {
 class Tir;
@@ -29,6 +30,7 @@ private:
     QList<Target2*> targets2;
     QList<int> focused_targets;
     TargetInfo target;
+    SettingMenu *menu;
 
     bool event(QEvent*);
     void CreateTarget();
