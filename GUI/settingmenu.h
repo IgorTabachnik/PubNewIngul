@@ -10,6 +10,14 @@ namespace Ui {
 class SettingMenu;
 }
 
+struct SettingParams
+{
+    SettingParams() {}
+    QColor color;
+
+
+};
+
 class SettingMenu : public QWidget
 {
     Q_OBJECT
@@ -17,15 +25,12 @@ class SettingMenu : public QWidget
 public:
     explicit SettingMenu(QWidget *parent = nullptr);
     ~SettingMenu();
-    QList<QPushButton*> pause_buttons;
-    QList<QRadioButton*> color_buttons;
-    QList<QPushButton*> system_buttons; //go del exit
-    QList<QPushButton*> size_change_buttons;
+    SettingParams GetParams();
 
 private:
     Ui::SettingMenu *ui;
-    void InitLists();
     void InitEvents();
+    QColor GetColor();
 
 private slots:
     void TimeCallback();
@@ -36,6 +41,9 @@ private slots:
     void PauseCallback();
     void SizeChangeCallback();
     void TimeChangeCallback();
+
+signals:
+    void ApplySignal();
 };
 
 #endif // SETTINGMENU_H

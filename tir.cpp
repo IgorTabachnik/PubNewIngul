@@ -25,6 +25,8 @@ Tir::Tir(int updateInterval, QWidget *parent) :
 
     menu = new SettingMenu();
     menu->show();
+
+    connect(menu,&SettingMenu::ApplySignal,this,&Tir::GetParams);
 }
 
 Tir::~Tir()
@@ -124,5 +126,10 @@ void Tir::ZoneShow(uint8_t zone)
 void Tir::ChangeColor()
 {
     target.ChangeColor(QColor(ui->red_slider->value(),ui->green_slider->value(),ui->blue_slider->value()));
+}
+
+void Tir::GetParams()
+{
+    menu->GetParams();
 }
 

@@ -15,31 +15,6 @@ SettingMenu::~SettingMenu()
 
 }
 
-void SettingMenu::InitLists()
-{
-
-    /*pause buttons*/
-    pause_buttons.append(ui->pushButton);
-    pause_buttons.append(ui->pushButton_2);
-
-    /*colors buttons*/
-    color_buttons.append(ui->colorblack_rb);
-    color_buttons.append(ui->colorblue_rb);
-    color_buttons.append(ui->colorgreen_rb);
-    color_buttons.append(ui->colorsea_rb);
-    color_buttons.append(ui->colorred_rb);
-    color_buttons.append(ui->colorpurple_rb);
-    color_buttons.append(ui->colorhacky_rb);
-    color_buttons.append(ui->colorgrey_rb);
-    color_buttons.append(ui->colordgrey_rb);
-    color_buttons.append(ui->colordblue_rb);
-    color_buttons.append(ui->colorlgreen_rb);
-    color_buttons.append(ui->colorlsea_rb);
-    color_buttons.append(ui->colorred_rb_2);
-    color_buttons.append(ui->colorpurple_rb);
-
-}
-
 void SettingMenu::InitEvents()
 {
     connect(ui->p10,&QPushButton::clicked,this,&SettingMenu::TimeCallback);
@@ -101,6 +76,9 @@ void SettingMenu::InitEvents()
     connect(ui->pushButton_8,&QPushButton::clicked,this,&SettingMenu::TimeChangeCallback);
     connect(ui->pushButton_9,&QPushButton::clicked,this,&SettingMenu::TimeChangeCallback);
     connect(ui->pushButton_10,&QPushButton::clicked,this,&SettingMenu::TimeChangeCallback);
+
+
+    connect(ui->pushButton_14,&QPushButton::clicked,this,&SettingMenu::ApplySignal);
 }
 
 void SettingMenu::VelocityCallback()
@@ -228,4 +206,21 @@ void SettingMenu::TimeChangeCallback()
     else if(btn == ui->pushButton_10) num=num<490?num+10:500;
 
     ui->lineEdit_2->setText(QString::number(num));
+}
+
+QColor SettingMenu::GetColor()
+{
+    QList<QRadioButton*> allButtons = ui->widget->findChildren<QRadioButton*>();
+    for(int i = 0;i<allButtons.size();++i)
+    {
+        if(allButtons[i]->isChecked()) return allButtons[i]->palette().color(QWidget::backgroundRole());
+    }
+}
+
+SettingParams SettingMenu::GetParams()
+{
+    SettingParams par;
+
+    par.color = GetColor();
+    return par;
 }
