@@ -14,7 +14,15 @@ struct SettingParams
 {
     SettingParams() {}
     QColor color;
-
+    uint16_t shot_time;
+    uint16_t size;
+    uint16_t velocity;
+    uint16_t max_targets;
+    uint16_t max_shots;
+    uint16_t pause;
+    uint16_t size_change;
+    uint16_t time_change;
+    uint16_t difficulty_change;
 
 };
 

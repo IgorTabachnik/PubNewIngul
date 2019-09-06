@@ -130,6 +130,8 @@ void Tir::ChangeColor()
 
 void Tir::GetParams()
 {
-    menu->GetParams();
+    auto asd = menu->GetParams();
+    target.ChangeColor(asd.color);
+
 }
 

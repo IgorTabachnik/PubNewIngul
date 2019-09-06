@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainMenu</class>
+ <widget class="QWidget" name="MainMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>939</width>
+    <height>170</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+color:black;
+background:url(:/new/prefix1/menu/sky.jpg)  ;
+
+background-size: cover;
+}
+QGroupBox::title{
+
+margin-top:5px;
+subcontrol-origin:margin;
+subcontrol-position:top center;
+
+}
+</string>
+     </property>
+     <property name="title">
+      <string>Main menu </string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="styleSheet">
+               <string notr="true">QLabel{
+color:black;
+
+}</string>
+              </property>
+              <property name="text">
+               <string>Language</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <widget class="QPushButton" name="rus_pb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                  </property>
+                  <property name="text">
+                   <string>Rus</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="ukr_pb">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                  </property>
+                  <property name="text">
+                   <string>Ukr</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="eng_pb">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                  </property>
+                  <property name="text">
+                   <string>Eng</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <widget class="QPushButton" name="get_pb">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                  </property>
+                  <property name="text">
+                   <string>Ger</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="fr_pb">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                  </property>
+                  <property name="text">
+                   <string>Fra</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="esp_pb">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                  </property>
+                  <property name="text">
+                   <string>Esp</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+color:black;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Shooter</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="shooter_edit">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+color:black;
+background-color: rgb(211, 215, 207);}</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+color:black;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Subdivision</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="subdivision_edit">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+color:black;
+background-color: rgb(211, 215, 207);}</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_11">
+          <item>
+           <widget class="QLabel" name="infotir_lb">
+            <property name="styleSheet">
+             <string notr="true">QLabel#infotir_lb{
+background-color:rgb(238, 238, 236);
+color:black;
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+}
+
+
+</string>
+            </property>
+            <property name="text">
+             <string>Imitation of fire by the mouse</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QPushButton" name="films_pb">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Films</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_5">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Exercises</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Targets</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_6">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Lists</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Settings</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_7">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Mode</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QPushButton" name="pushButton_3">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Archive</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_8">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Protocol</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QPushButton" name="pushButton_4">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+border-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+
+color:black;
+	background-color: rgb(211, 215, 207);}</string>
+                </property>
+                <property name="text">
+                 <string>Record</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_9">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+border:2px inset grey;
+background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, 
+stop: 0 #E0E0E0, stop: 1 #FFFFFF); 
+
+color:black;
+	background-color: rgb(252, 175, 62);}</string>
+                </property>
+                <property name="text">
+                 <string>Exit</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

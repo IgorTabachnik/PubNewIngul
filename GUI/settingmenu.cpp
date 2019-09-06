@@ -213,8 +213,13 @@ QColor SettingMenu::GetColor()
     QList<QRadioButton*> allButtons = ui->widget->findChildren<QRadioButton*>();
     for(int i = 0;i<allButtons.size();++i)
     {
-        if(allButtons[i]->isChecked()) return allButtons[i]->palette().color(QWidget::backgroundRole());
+
+        if(allButtons[i]->isChecked())
+        {
+            return allButtons[i]->grab().toImage().pixelColor(allButtons[i]->width()/2,allButtons[i]->height()/2);
+        }
     }
+    return QColor(0,0,0);
 }
 
 SettingParams SettingMenu::GetParams()
@@ -222,5 +227,14 @@ SettingParams SettingMenu::GetParams()
     SettingParams par;
 
     par.color = GetColor();
+    par.size = ui->scale_edit->text().toUShort();
+    par.pause = ui->pause_edit->text().toUShort();
+    par.velocity = ui->velocity_edit->text().toUShort();
+    par.max_shots = ui->countshoots_edit->text().toUShort();
+    par.shot_time = ui->time_edit->text().toUShort();
+    par.max_targets = ui->count_edit->text().toUShort();
+    par.size_change = ui->lineEdit->text().toUShort();
+    par.time_change = ui->lineEdit->text().toUShort();
+    par.difficulty_change = static_cast<uint16_t>(ui->horizontalSlider->value());
     return par;
 }

@@ -24,6 +24,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    GUI/choicewindow.cpp \
+    GUI/listseditor.cpp \
+    GUI/mainmenu.cpp \
     GUI/settingmenu.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -33,6 +36,9 @@ SOURCES += \
     formgroup.cpp
 
 HEADERS += \
+    GUI/choicewindow.h \
+    GUI/listseditor.h \
+    GUI/mainmenu.h \
     GUI/settingmenu.h \
         mainwindow.h \
     target2.h \
@@ -43,6 +49,9 @@ HEADERS += \
     formgroup.h
 
 FORMS += \
+    GUI/choicewindow.ui \
+    GUI/listseditor.ui \
+    GUI/mainmenu.ui \
     GUI/settingmenu.ui \
         mainwindow.ui \
     tir.ui \
