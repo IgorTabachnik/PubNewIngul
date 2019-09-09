@@ -14,6 +14,12 @@ class MovingExercises : public QWidget
 public:
     explicit MovingExercises(QWidget *parent = nullptr);
     ~MovingExercises();
+public slots:
+    void CheckStatic();
+    void CheckMoving();
+    void ChoiceStatic();
+    void ChoiceMoving();
+
 
 private:
     Ui::MovingExercises *ui;
