@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>804</width>
-    <height>505</height>
+    <width>741</width>
+    <height>448</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,23 +20,57 @@
    <property name="enabled">
     <bool>true</bool>
    </property>
-   <widget class="Choicewindow" name="widget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>171</width>
-      <height>311</height>
-     </rect>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="0" colspan="4">
+     <widget class="MainMenu" name="main_menu" native="true"/>
+    </item>
+    <item row="0" column="2" rowspan="4">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="3" rowspan="2">
+     <widget class="ListsEditor" name="list_edit" native="true"/>
+    </item>
+    <item row="0" column="3" rowspan="2">
+     <widget class="ChoiceExercises" name="choice_menu" native="true"/>
+    </item>
+    <item row="0" column="0" rowspan="3">
+     <widget class="MovingExercises" name="exercises" native="true">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>804</width>
+     <width>741</width>
      <height>25</height>
     </rect>
    </property>
@@ -54,9 +88,27 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>Choicewindow</class>
+   <class>MainMenu</class>
    <extends>QWidget</extends>
-   <header>choicewindow.h</header>
+   <header location="global">mainmenu.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ChoiceExercises</class>
+   <extends>QWidget</extends>
+   <header location="global">choiceexercises.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ListsEditor</class>
+   <extends>QWidget</extends>
+   <header location="global">listseditor.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MovingExercises</class>
+   <extends>QWidget</extends>
+   <header location="global">movingexercises.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
