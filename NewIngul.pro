@@ -24,23 +24,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    GUI/choiceexercises.cpp \
     GUI/choicewindow.cpp \
     GUI/listseditor.cpp \
     GUI/mainmenu.cpp \
+    GUI/mainwindow.cpp \
+    GUI/movingexercises.cpp \
     GUI/settingmenu.cpp \
         main.cpp \
-        mainwindow.cpp \
     target2.cpp \
     target_info.cpp \
     tir.cpp \
     formgroup.cpp
 
 HEADERS += \
+    GUI/choiceexercises.h \
     GUI/choicewindow.h \
     GUI/listseditor.h \
     GUI/mainmenu.h \
+    GUI/mainwindow.h \
+    GUI/movingexercises.h \
     GUI/settingmenu.h \
-        mainwindow.h \
     target2.h \
     target_info.h \
     tir.h \
@@ -49,11 +53,13 @@ HEADERS += \
     formgroup.h
 
 FORMS += \
+    GUI/choiceexercises.ui \
     GUI/choicewindow.ui \
     GUI/listseditor.ui \
     GUI/mainmenu.ui \
+    GUI/mainwindow.ui \
+    GUI/movingexercises.ui \
     GUI/settingmenu.ui \
-        mainwindow.ui \
     tir.ui \
     formgroup.ui \
     originalTirUI/Film.ui \
