@@ -48,12 +48,20 @@ void Target2::SetMovements(QList<QPointF> move)
 
 void Target2::StartAnimation()
 {
-    anim->setStartValue(movements[0]);
-    anim->setEndValue(movements[1]);
-    curr_animation = 1;
-    anim->setDuration(QLineF(geometry().topLeft(),movements[0].topLeft()).length()*curr_speed/PIXELS_PER_SPEED);
-    anim->start();
-    this->show();
+    if(anim_type != ANIM_STATIC)
+    {
+        anim->setStartValue(movements[0]);
+        anim->setEndValue(movements[1]);
+        curr_animation = 1;
+        anim->setDuration(QLineF(geometry().topLeft(),movements[0].topLeft()).length()*curr_speed/PIXELS_PER_SPEED);
+        anim->start();
+        this->show();
+    }
+    else
+    {
+        this->setGeometry(movements[0].toRect());
+        this->show();
+    }
 }
 
 void Target2::SetSpeed(int speed)

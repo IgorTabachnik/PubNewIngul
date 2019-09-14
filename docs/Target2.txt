@@ -1,0 +1,52 @@
+класс Target2 создаёт цель на поле. Для работы используются следующие функции:
+
+LoadTexture(TargetImage*); (будет немного изменена)
+SetMovements(QList<QPointF>); (будет изменена на QPoint вместо QPointF)
+StartAnimation();
+SetAnimationType(ANIM_TYPE);
+SetSize(uint8_t);
+SetSpeed(int); (скорее всего, будет изменена на uint8_t)
+
+сигналы:
+AnimationEnd(Target2*);
+DeleteHandler(Target2*);
+ZoneHandler(uint8_t*);
+
+Функция LoadTexture берёт все данные из структуры TargetImage* (в которой хранятся нужные изображения) и применяет всё на себя.
+Все нужные TargetImage содержатся, на данный момент, в классе TargetInfo (torso,body,circle etc.)
+
+Функция SetMovements задаёт точки перемещения цели. Для статичной цели (ANIM_TYPE::ANIM_STATIC) можно задать только 1 точку.
+
+Функция StartAnimation запускает анимацию. Для статической цели будет применена только первая точка.
+
+Функция SetAnimationType задаёт тип анимации (движения) цели. Используется энумерация ANIM_TYPE
+ANIM_TYPE:
+    ANIM_SQUARE,    ---перемещение квадратом, затем по  траектории, и снова квадратом
+    ANIM_ZOOM,      ---перемещение с отдалением цели
+    ANIM_PARABOLA,  ---перемещение по кривой-параболе
+    ANIM_STATIC     --Без движения
+
+Функция (слот) SetSize устанавливает размер цели, от 1 до 10. Функция находится в доработке, поэтому сейчас значения от 0 до 100 (проценты).
+
+Функция (слот) SetSpeed устанавливает скорость, от 1 до 10. Функция находится в доработке, поэтому там сейчас значения от 100 до 5000.
+
+Сигнал AnimationEnd указывает на состояние отработанной анимации цели. И возвращает указатель на данную цель.
+
+Сигнал DeleteHandler указывает на удаление цели и возвращает указатель на эту цель.
+
+Сигнал ZoneHandler указывает на то, что по цели произошло попадание, и возвращает текущую зону поражения от центра.
+
+
+Инициализация цели происходит следующим образом:
+
+Target2* target = new Target2(this); //создание экземпляра
+target->LoadTexture(&target.torso); //target - класс TargetInfo, как пример, torso - это торс.
+target->SetAnimationType(ANIM_TYPE::ANIM_STATIC); //Указываем тип анимации
+target->SetSize(100); \\Размер 100
+target->SetSpeed(3000); \\скорость 3000
+//points fo animation
+target->SetMovements(QList<QPointF>); //создаём список точек
+target->StartAnimation(); //запускается анимация.
+connect(targets2.last(),&Target2::DeleteHandler,this,&Tir::Deleter); //сигнал-слот для удаления цели
+connect(targets2.last(),&Target2::AnimationEnd,this,&Tir::GeneratePoints); //сигнал-слот после окончания анимации (если нужно)
+connect(targets2.last(),&Target2::ZoneHandler,this,&Tir::ZoneShow); //сигнал-слот после попадания в цель.

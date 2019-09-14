@@ -69,8 +69,10 @@ void Tir::GeneratePoints(Target2* tgt)
     break;
 
     case ANIM_STATIC:
-        tgt->setGeometry(rand.generate()%this->geometry().width(),rand.generate()%this->geometry().height(),tgt->width(),tgt->height());
-        tgt->show();
+        new_points.append(QPointF(rand.generate()%this->geometry().width(),rand.generate()%this->geometry().height()));
+        tgt->SetMovements(new_points);
+        tgt->StartAnimation();
+    break;
 
     default:
         break;

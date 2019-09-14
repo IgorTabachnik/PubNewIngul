@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>docs/Target2.txt</file>
+    </qresource>
+</RCC>

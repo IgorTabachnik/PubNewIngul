@@ -84,6 +84,7 @@ FORMS += \
     originalTirUI/EdUpr.ui
 
 RESOURCES += \
+    docs.qrc \
     images.qrc
 
 DISTFILES +=
